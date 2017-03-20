@@ -9,7 +9,9 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-
+alias ls='ls -G'
+alias la='ls -a'
+alias ll='ls -l'
 
 
 function parse_git_branch {
