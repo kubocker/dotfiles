@@ -163,7 +163,8 @@ let g:memolist_unite        = 1
 let g:memolist_unite_source = 'file_rec'
 let g:memolist_unite_option = '-start-insert'
 
-
+" mattn calendar "
+let g:calendar_diary = '~/Develop/kubocker/work/diary'
 
 
 let g:netrw_nogx = 1
