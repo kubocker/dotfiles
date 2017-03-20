@@ -18,7 +18,7 @@
 #################################################################
 
 # setting
-kbk_dir=Develop/kubocker/vagrant_dotfiles
+kbk_dir=Develop/kubocker/dotfiles
 
 # start
 echo "Start setting of dotfiles..."
@@ -66,7 +66,7 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew cask install ccleaner iterm2 vagrant virtualbox karabiner
 
 else
-    echo "$(uname -s)"
+    echo "This is $(uname -s)"
     echo "installing apps..."
     sudo yum install -y git vim patch httpd epel-release.noarch the_silver_searcher \
                         tig lsof jq tmux peco \
@@ -95,25 +95,20 @@ else
 
 fi
 
-echo 'Setting nodebrew...'
-#curl -L git.io/nodebrew | perl - setup
-#nodebrew install-binary stable
-#npm update -g npm
-
 echo 'Checking...'
 if [ -e ~/.vim ]; then
     echo 'rm -rf ~/.vim; then mkdir ~/.vim'
     rm -rf ~/.vim
 fi
 
-echo "install vim-plug"
+echo "Installing vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "make... symbolink"
 for file in ${dotfiles[@]}
 do
   if [ -e $HOME/$file ]; then
-    rm $HOME/$file
+    rm -f $HOME/$file
   fi
   ln -s $dir/$file $HOME/$file
 done
@@ -125,7 +120,7 @@ source ~/.bashrc
 exec $SHELL -l # 再読み込み
 
 # vim-plug
-echo "Installing Vim Plug"
+echo "Installing Vim Plugin"
 vim +PlugInstall +qall
 
 echo "setting tmux"
