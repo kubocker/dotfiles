@@ -187,11 +187,3 @@ if isdirectory(expand("~/.vim/plugged"))
     colorscheme seattle
 endif
 
-"function! Test()
-"    let res = webapi#http#get('http://localhost:8000/hello')
-"    let content = webapi#json#decode(res.content)
-"    echo content
-"endfunction
-"
-"
-"command! Hello :call Test()
