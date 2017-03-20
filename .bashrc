@@ -40,6 +40,3 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #tmux
-
-export NVM_DIR="/home/vagrant/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
