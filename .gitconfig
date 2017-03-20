@@ -1,0 +1,12 @@
+[user]
+    name = kubocker
+    email = kubocker@gmail.com
+
+[alias]
+    co = commit
+    st = status
+    br = branch
+    ch = checkout
+
+[color]
+    ui = auto
