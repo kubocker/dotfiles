@@ -52,8 +52,9 @@ if [ $(uname -s) = 'Darwin' ]; then
 
     echo "Installing brew apps now"
     brew install \
-        vim macvim \
-        pyenv rbenv \
+        vim --with-python3 --without-python --with-lua \
+        macvim \
+        pyenv rbenv phpenv jenv nvm swiftenv \
         clisp \
         git tig
 
@@ -68,7 +69,9 @@ if [ $(uname -s) = 'Darwin' ]; then
 else
     echo "This is $(uname -s)"
     echo "installing apps..."
-    sudo yum install -y git vim patch httpd epel-release.noarch the_silver_searcher \
+    sudo yum install -y git \
+                        vim --with-python3 --without-python --with-lua \
+                        patch httpd epel-release.noarch the_silver_searcher \
                         tig lsof jq tmux peco \
                         wget \
                         gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags
