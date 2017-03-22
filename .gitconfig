@@ -8,5 +8,8 @@
     br = branch
     ch = checkout
 
+[core]
+   editor = vim
+
 [color]
     ui = auto
