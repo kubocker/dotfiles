@@ -51,13 +51,10 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew update & upgrade
 
     echo "Installing brew apps now"
-    brew install \
-        vim --with-python3 --without-python --with-lua \
-        macvim \
-        pyenv rbenv phpenv jenv nvm swiftenv \
-        clisp \
-        git tig
-
+    brew install vim --with-python3 --without-python --with-lua \
+                macvim \
+                clisp \
+                git tig tmux
 
     brew tap universal-ctags/universal-ctags
     brew install --HEAD universal-ctags
@@ -76,27 +73,30 @@ else
                         wget \
                         gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags
 
-    # pyenv
-    git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-
-    # rbenv
-    git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-
-    # jenv
-    git clone https://github.com/gcuisinier/jenv.git ~/.jenv
-
-    # phpenv
-    curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
-    git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
-    
-    # nvm
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
-
-    # swiftenv
-    git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
 
 fi
+
+echo 'Installing... controlling language versions'
+# pyenv
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+
+# rbenv
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# jenv
+git clone https://github.com/gcuisinier/jenv.git ~/.jenv
+
+# phpenv
+curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
+git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
+
+# nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+
+# swiftenv
+git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
+
 
 echo 'Checking...'
 if [ -e ~/.vim ]; then
@@ -116,15 +116,16 @@ do
   ln -s $dir/$file $HOME/$file
 done
 
+# vim-plug
+echo "Installing Vim Plugin"
+vim +PlugInstall +qall
+
 # source
 echo "source ~/.bash_profile and ~/.bashrc"
 source ~/.bash_profile
 source ~/.bashrc
 exec $SHELL -l # 再読み込み
 
-# vim-plug
-echo "Installing Vim Plugin"
-vim +PlugInstall +qall
 
 echo "setting tmux"
 tmux source-file ~/.tmux.conf
