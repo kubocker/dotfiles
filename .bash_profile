@@ -39,3 +39,6 @@ export NVM_ROOT="$HOME/.nvm"
 export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
 eval "$(swiftenv init -)"; 
+
+# ansible
+#export HOMEBREW_CASK_OPTS="--appdir=/Applications"
