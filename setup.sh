@@ -39,7 +39,7 @@ if [ $dir != $HOME/$kbk_dir ]; then
 	return
 fi
 
-## mac
+# mac
 if [ $(uname -s) = 'Darwin' ]; then
 
     # Homebrew
