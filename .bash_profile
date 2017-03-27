@@ -33,7 +33,7 @@ eval "$(phpenv init -)"
 
 # nvm
 export NVM_ROOT="$HOME/.nvm"
-[ -s "$NVM_ROOT/nvm.sh" ] && . "$NVM_ROOT/nvm.sh" ]
+[ -s "$NVM_ROOT/nvm.sh" ] && . "$NVM_ROOT/nvm.sh"
 
 # swiftenv
 export SWIFTENV_ROOT="$HOME/.swiftenv"
