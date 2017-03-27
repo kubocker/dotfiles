@@ -165,7 +165,6 @@ let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
 let g:calendar_diary = '~/Develop/kubocker/work/diary'
-"autocmd BufNewFile $HOME/Develop/kubocker/work/diary/*/*.md 0r $HOME/Develop/kubocker/work/text.txt
 
 
 let g:netrw_nogx = 1
