@@ -12,10 +12,10 @@ fi
 
 # mac
 if [ "$(uname)" = 'Darwin' ]; then
-    export LSCOLORS=xbfxcxdxbxegedabagacad  #RED
+    #export LSCOLORS=xbfxcxdxbxegedabagacad  #RED
     #export LSCOLORS=xcfxcxdxbxegedabagacad #GREEN
     #export LSCOLORS=xdfxcxdxbxegedabagacad #YELLOW
-    #export LSCOLORS=xefxcxdxbxegedabagacad
+    export LSCOLORS=xefxcxdxbxegedabagacad
     #export LSCOLORS=xffxcxdxbxegedabagacad
     #export LSCOLORS=xgfxcxdxbxegedabagacad
     #export LSCOLORS=xhfxcxdxbxegedabagacad
@@ -60,7 +60,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # alias
 alias ll='`ls | fzf | awk '\''{ print $9 }'\''`'
 alias hh='`history | fzf | awk '\''{ print $1 }'\''`'
-
 
 #tmux
 
