@@ -9,10 +9,6 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-#alias ls='ls -G'
-#alias la='ls -a'
-#alias ll='ls -l'
-#export LS_COLORS="no=00:fi=00:di=01;36:ln=01;34"
 
 # mac
 if [ "$(uname)" = 'Darwin' ]; then
@@ -60,6 +56,11 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # tmux用対策
 #echo "export TERM=xterm-256color" >> .bashrc
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# alias
+alias ll='`ls | fzf | awk '\''{ print $9 }'\''`'
+alias hh='`history | fzf | awk '\''{ print $1 }'\''`'
+
 
 #tmux
 
