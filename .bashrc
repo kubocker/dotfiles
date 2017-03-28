@@ -50,9 +50,6 @@ function promps {
 }
 promps
 
-# node
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 # tmux用対策
 #echo "export TERM=xterm-256color" >> .bashrc
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
