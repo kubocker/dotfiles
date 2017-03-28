@@ -30,6 +30,7 @@ dotfiles=(
 	.tmux.conf
     .vimrc
     .bowerrc
+    .gvimrc
 	)
 dir=$(pwd)
 
