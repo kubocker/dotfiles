@@ -100,9 +100,9 @@ git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
 
 
 echo 'Checking...'
-if [ -e ~/.vim ]; then
+if [ -e $HOME/.vim ]; then
     echo 'rm -rf ~/.vim; then mkdir ~/.vim'
-    rm -rf ~/.vim
+    rm -rf $HOME/.vim
 fi
 
 echo "Installing vim-plug"
