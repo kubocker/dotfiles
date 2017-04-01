@@ -15,6 +15,8 @@ Plug 'KeitaNakamura/neodark.vim'
 Plug 'mbbill/vim-seattle'
 Plug 'cocopon/iceberg.vim'
 Plug 'davidklsn/vim-sialoquent'
+Plug 'nightsense/seabird'
+Plug 'zcodes/vim-colors-basic'
 " autocomplete
 Plug 'davidhalter/jedi-vim', "autoload": { "filetypes": ["python", "python3", "djangohtml"], }, "build" : { "mac" : "pip install jedi", "unix" : "pip install jedi"  } }
 "Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
@@ -83,12 +85,29 @@ Plug 'tyru/open-browser.vim'
 
 call plug#end()
 
+if isdirectory(expand("~/.vim/plugged"))
 
-" NERDTree
-let file_name = expand('%')
-if has('vim_starting') &&  file_name == ''
-  autocmd VimEnter * NERDTree ./
+    " NERDTree "
+    let file_name = expand('%')
+    if has('vim_starting') &&  file_name == ''
+      autocmd VimEnter * NERDTree ./
+    endif
+
+    " ColorScheme "
+    "colorscheme molokai
+    "colorscheme iceberg
+    "colorscheme nordisk
+    "colorscheme zazen
+    "colorscheme neodark
+    "colorscheme sialoquent
+    "colorscheme seattle
+    "colorscheme petrel
+    "colorschem seagull
+    colorschem basic-dark
+    "colorschem basic-light
+
 endif
+
 
 
 " fzf
@@ -117,6 +136,9 @@ set incsearch
 set guioptions-=e
 set cursorline
 set colorcolumn=80
+set background=dark
+set termguicolors
+highlight NonText ctermbg=none
 "set guicursor+=i:ver100-iCursor
 "set guicursor=i:ver25-iCursor
 "" markdownのハイライトを有効にする
@@ -174,17 +196,3 @@ vmap gx <Plug>(openbrowser-open)
 "Map your keys
 "nmap <c-i> <Plug>(simple-todo-new)
 "imap <c-i> <Plug>(simple-todo-new)
-
-
-
-" ColorScheme
-if isdirectory(expand("~/.vim/plugged"))
-    "colorscheme molokai
-    "colorscheme iceberg
-    "colorscheme nordisk
-    "colorscheme zazen
-    "colorscheme neodark
-    "colorscheme sialoquent
-    colorscheme seattle
-endif
-
