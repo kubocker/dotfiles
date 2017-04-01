@@ -137,7 +137,6 @@ set guioptions-=e
 set cursorline
 set colorcolumn=80
 set background=dark
-set termguicolors
 highlight NonText ctermbg=none
 "set guicursor+=i:ver100-iCursor
 "set guicursor=i:ver25-iCursor
