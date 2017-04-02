@@ -19,7 +19,8 @@ Plug 'nightsense/seabird'
 Plug 'zcodes/vim-colors-basic'
 " autocomplete
 Plug 'davidhalter/jedi-vim', "autoload": { "filetypes": ["python", "python3", "djangohtml"], }, "build" : { "mac" : "pip install jedi", "unix" : "pip install jedi"  } }
-"Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
+Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
+Plug 'hdima/python-syntax'
 "Plug 'OmniSharp/omnisharp-vim'
 "Plug 'OmniSharp/omnisharp-vim', { 'autoload': { 'filetypes':  ['cs', 'csi', 'csx'] }, 'build': { 'mac': 'xbuild/server/OmniSharp.sln', 'unix': 'xbuild/server/OmniSharp.sln'} }
 Plug 'OrangeT/vim-csharp'
@@ -68,6 +69,7 @@ Plug 'vim-scripts/dbext.vim'
 "framework
 " -- django --
 Plug 'jmcomets/vim-pony'
+Plug 'vim-scripts/django.vim'
 " others
 Plug 'mizukmb/otenki.vim'
 Plug 'osyo-manga/vim-sugarpot'
