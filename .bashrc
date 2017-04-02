@@ -10,22 +10,6 @@ fi
 
 # User specific aliases and functions
 
-# mac
-if [ "$(uname)" = 'Darwin' ]; then
-    #export LSCOLORS=xbfxcxdxbxegedabagacad  #RED
-    #export LSCOLORS=xcfxcxdxbxegedabagacad #GREEN
-    #export LSCOLORS=xdfxcxdxbxegedabagacad #YELLOW
-    export LSCOLORS=xefxcxdxbxegedabagacad
-    #export LSCOLORS=xffxcxdxbxegedabagacad
-    #export LSCOLORS=xgfxcxdxbxegedabagacad
-    #export LSCOLORS=xhfxcxdxbxegedabagacad
-    alias ls='ls -G'
-
-# linux
-else
-    eval `dircolors ~/.colorrc`
-    alias ls='ls --color=auto'
-fi
 
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
@@ -46,12 +30,29 @@ function promps {
         *)      TITLEBAR="";;
     esac
     local BASE="\u@\h"
-    PS1="${TITLEBAR}${LIGHTGREEN}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${BLUE}\$${WHITE} "
+
+    # mac
+    if [ "$(uname)" = 'Darwin' ]; then
+        #export LSCOLORS=xbfxcxdxbxegedabagacad  #RED
+        #export LSCOLORS=xcfxcxdxbxegedabagacad #GREEN
+        #export LSCOLORS=xdfxcxdxbxegedabagacad #YELLOW
+        export LSCOLORS=xefxcxdxbxegedabagacad
+        #export LSCOLORS=xffxcxdxbxegedabagacad
+        #export LSCOLORS=xgfxcxdxbxegedabagacad
+        #export LSCOLORS=xhfxcxdxbxegedabagacad
+        alias ls='ls -G'
+
+        PS1="${TITLEBAR}${LIGHTGREEN}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${BLUE}\$${WHITE} "
+
+    # linux
+    else
+        alias ls='ls --color=auto'
+
+        PS1="${TITLEBAR}${LIGHTPURPLE}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${BLUE}\$${WHITE} "
+    fi
 }
 promps
 
-# tmux用対策
-#echo "export TERM=xterm-256color" >> .bashrc
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # alias
@@ -59,4 +60,3 @@ alias ll='`ls | fzf | awk '\''{ print $9 }'\''`'
 alias hh='`history | fzf | awk '\''{ print $1 }'\''`'
 
 #tmux
-
