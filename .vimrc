@@ -18,7 +18,6 @@ Plug 'davidklsn/vim-sialoquent'
 Plug 'nightsense/seabird'
 Plug 'zcodes/vim-colors-basic'
 " autocomplete
-Plug 'davidhalter/jedi-vim', "autoload": { "filetypes": ["python", "python3", "djangohtml"], }, "build" : { "mac" : "pip install jedi", "unix" : "pip install jedi"  } }
 Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
 Plug 'hdima/python-syntax'
 "Plug 'OmniSharp/omnisharp-vim'
@@ -91,7 +90,9 @@ if isdirectory(expand("~/.vim/plugged"))
 
     " NERDTree "
     let file_name = expand('%')
-    if has('vim_starting') &&  file_name == ''
+    let git = isdirectory('.git')
+    "if has('vim_starting') && file_name == ''
+    if has('vim_starting') && git
       autocmd VimEnter * NERDTree ./
     endif
 
@@ -102,10 +103,10 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme zazen
     "colorscheme neodark
     "colorscheme sialoquent
-    "colorscheme seattle
+    colorscheme seattle
     "colorscheme petrel
     "colorschem seagull
-    colorschem basic-dark
+    "colorschem basic-dark
     "colorschem basic-light
 
 endif
@@ -140,6 +141,7 @@ set cursorline
 set colorcolumn=80
 set background=dark
 highlight NonText ctermbg=none
+autocmd FileType python setlocal completeopt-=preview
 "set guicursor+=i:ver100-iCursor
 "set guicursor=i:ver25-iCursor
 "" markdownのハイライトを有効にする
