@@ -31,6 +31,13 @@ export PHPENV_ROOT="$HOME/.phpenv"
 export PATH="$PHPENV_ROOT/bin:$PATH"
 eval "$(phpenv init -)"
 
+# pear
+export PATH="$HOME/pear/bin:$PATH"
+# composer
+export PATH=~/.composer/vendor/bin:$PATH
+# valet
+export PATH=$PATH:~/.composer/vendor/bin
+
 # nvm
 export NVM_ROOT="$HOME/.nvm"
 [ -s "$NVM_ROOT/nvm.sh" ] && . "$NVM_ROOT/nvm.sh"
