@@ -117,6 +117,10 @@ do
   ln -s $dir/$file $HOME/$file
 done
 
+# kbk vims
+git clone git@github.com:kubocker/userautoload.git $HOME/Develop/kubocker/userautoload
+ln -nfs $HOME/Develop/kubocker/userautoload $HOME/.vim/userautoload
+
 # vim-plug
 echo "Installing Vim Plugin"
 vim +PlugInstall +qall
@@ -125,7 +129,7 @@ vim +PlugInstall +qall
 echo "source ~/.bash_profile and ~/.bashrc"
 source ~/.bash_profile
 source ~/.bashrc
-exec $SHELL -l # 再読み込み
+#exec $SHELL -l # 再読み込み
 
 
 echo "setting tmux"
