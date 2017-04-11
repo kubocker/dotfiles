@@ -22,7 +22,7 @@ Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload':
 Plug 'hdima/python-syntax'
 "Plug 'OmniSharp/omnisharp-vim'
 "Plug 'OmniSharp/omnisharp-vim', { 'autoload': { 'filetypes':  ['cs', 'csi', 'csx'] }, 'build': { 'mac': 'xbuild/server/OmniSharp.sln', 'unix': 'xbuild/server/OmniSharp.sln'} }
-Plug 'OrangeT/vim-csharp'
+"Plug 'OrangeT/vim-csharp'
 Plug 'tpope/vim-dispatch'
 Plug 'tikhomirov/vim-glsl'
 "Plug 'Valloric/YouCompleteMe'
@@ -34,7 +34,7 @@ Plug 'moll/vim-node'
 Plug 'stanangeloff/php.vim'
 Plug 'violetyk/neocomplete-php.vim'
 Plug 'keith/swift.vim'
-Plug 'burnettk/vim-angular'
+"Plug 'burnettk/vim-angular'
 " Snippet
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -139,7 +139,8 @@ set incsearch
 set guioptions-=e
 set cursorline
 set colorcolumn=80
-set background=dark
+set background=light
+"set background=black
 highlight NonText ctermbg=none
 autocmd FileType python setlocal completeopt-=preview
 "set guicursor+=i:ver100-iCursor
@@ -156,26 +157,31 @@ runtime! userautoload/*.vim
 " set nocursorline
 " autocmd InsertEnter,InsertLeave * set cursorline!
 
-" Key Map
+" ---------- Key Map --------- "
+" nerdtree
 nnoremap <Space>n :NERDTree<CR>
 
+" calender.vim
 nnoremap <Space>c :Calendar<CR>
 
+" fzf.vim
 nnoremap <Tab>h :History:<CR>
 nnoremap <Tab>f :Files<CR>
 nnoremap <Tab>c :Commits<CR>
 nnoremap <Tab>g :GFiles?<CR>
 
-nnoremap <silent> vs :VimShell<CR>
-nnoremap <silent> vsc :VimShellCreate<CR>
-nnoremap <silent> vp :VimeShellPop<CR>
+" vimshell.vim
+nnoremap <silent>vs :VimShell<CR>
+nnoremap <silent>vsc :VimShellCreate<CR>
+nnoremap <silent>vp :VimeShellPop<CR>
 
+" memolist.vim
 nnoremap <silent>mn :MemoNew<CR>
 nnoremap <silent>ml :MemoList<CR>
 nnoremap <silent>mg :MemoGrep<CR>
 nmap mf  :FufFile <C-r>=expand(g:memolist_path."/")<CR><CR>
 
-" global setting
+" ---------- global setting ---------- "
 let g:vimshell_interactive_update_time = 10
 let g:vimshell_prompt = $USERNAME."% "
 let g:calendar_google_calendar = 1
