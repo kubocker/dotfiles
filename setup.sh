@@ -47,15 +47,11 @@ if [ $(uname -s) = 'Darwin' ]; then
     [ -z "$(which brew)" ] &&
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    echo "Updating homebrew"
-    brew doctor
-    brew update & upgrade
-
     echo "Installing brew apps now"
-    brew install vim --with-python3 --without-python --with-lua \
-                macvim \
-                clisp \
-                git tig tmux
+    brew install vim --with-python3 --without-python --with-lua
+    brew install macvim
+    brew install clisp
+    brew install git tig tmux
 
     brew tap universal-ctags/universal-ctags
     brew install --HEAD universal-ctags
@@ -97,6 +93,12 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | b
 
 # swiftenv
 git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
+
+echo 'git prompt'
+# git-prompt
+if [ ! -e ~/.git-prompt.sh ]; then
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+fi
 
 
 echo 'Checking...'
