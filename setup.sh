@@ -94,6 +94,9 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | b
 # swiftenv
 git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
 
+# goenv
+git clone https://github.com/wfarr/goenv.git ~/.goenv
+
 echo 'git prompt'
 # git-prompt
 if [ ! -e ~/.git-prompt.sh ]; then

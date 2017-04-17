@@ -47,5 +47,9 @@ export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
 eval "$(swiftenv init -)"; 
 
+# goenv
+export PATH="$HOME/.goenv/bin:$PATH"
+eval "$(goenv init -)"
+
 # ansible
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
