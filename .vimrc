@@ -1,11 +1,12 @@
 
 call plug#begin('~/.vim/plugged')
 
-" NERDTree
+" ---- // NERDTree ---- "
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" colorscheme
+
+" ---- // colorscheme --- "
 Plug 'tomasr/molokai'
 Plug 'zaki/zazen'
 Plug 'encody/nvim'
@@ -17,37 +18,64 @@ Plug 'cocopon/iceberg.vim'
 Plug 'davidklsn/vim-sialoquent'
 Plug 'nightsense/seabird'
 Plug 'zcodes/vim-colors-basic'
-" autocomplete
+
+" ---- // autocomplete ---- "
+" - python
 Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
 Plug 'hdima/python-syntax'
+Plug 'davidhalter/jedi-vim'
+Plug 'andviro/flake8-vim'
+Plug 'hynek/vim-python-pep8-indent'
+
+" - django
+Plug 'jmcomets/vim-pony'
+Plug 'vim-scripts/django.vim'
+
+" - ruby
+
+" - go
+Plug 'fatih/vim-go'
+
+" - javascript
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'moll/vim-node'
+"Plug 'burnettk/vim-angular'
+
+" - php
+Plug 'stanangeloff/php.vim'
+Plug 'violetyk/neocomplete-php.vim'
+
+" - swift
+Plug 'keith/swift.vim'
+
+" - c sharp
 "Plug 'OmniSharp/omnisharp-vim'
 "Plug 'OmniSharp/omnisharp-vim', { 'autoload': { 'filetypes':  ['cs', 'csi', 'csx'] }, 'build': { 'mac': 'xbuild/server/OmniSharp.sln', 'unix': 'xbuild/server/OmniSharp.sln'} }
 "Plug 'OrangeT/vim-csharp'
+"
+"
 Plug 'tpope/vim-dispatch'
 Plug 'tikhomirov/vim-glsl'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
-Plug 'fatih/vim-go'
-Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'moll/vim-node'
-Plug 'stanangeloff/php.vim'
-Plug 'violetyk/neocomplete-php.vim'
-Plug 'keith/swift.vim'
-"Plug 'burnettk/vim-angular'
-" Snippet
+
+
+" ---- // Snippet ---- "
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
 Plug 'cohama/lexima.vim'
-" grep
+
+" ---- //  grep ---- "
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 "Plug 'Shougo/vimproc.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" git
+
+" ---- // git ---- "
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
 Plug 'kmnk/vim-unite-giti'
@@ -55,7 +83,8 @@ Plug 'cohama/agit.vim'
 Plug 'jreybert/vimagit'
 Plug 'AndrewRadev/gapply.vim'
 Plug 'rhysd/committia.vim'
-"vim
+
+" ---- // vim ---- //
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Townk/vim-autoclose'
 Plug 'thinca/vim-quickrun'
@@ -65,11 +94,7 @@ Plug 'Shougo/vimshell.vim'
 "DB
 Plug 'mattn/vdbi-vim'
 Plug 'vim-scripts/dbext.vim'
-"framework
-" -- django --
-Plug 'jmcomets/vim-pony'
-Plug 'vim-scripts/django.vim'
-" others
+" ---- // others ---- //
 Plug 'mizukmb/otenki.vim'
 Plug 'osyo-manga/vim-sugarpot'
 Plug 'mattn/calendar-vim'
@@ -83,6 +108,10 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'tyru/open-browser.vim'
 "Plug 'plasticboy/vim-markdown'
 "Plug 'kannokanno/previm'
+"
+"
+" ---- // kubocker ---- "
+Plug 'kubocker/cal.vim'
 
 call plug#end()
 
@@ -91,8 +120,8 @@ if isdirectory(expand("~/.vim/plugged"))
     " NERDTree "
     let file_name = expand('%')
     let git = isdirectory('.git')
-    "if has('vim_starting') && file_name == ''
-    if has('vim_starting') && git
+    if has('vim_starting') && file_name == ''
+    "if has('vim_starting') && git
       autocmd VimEnter * NERDTree ./
     endif
 
@@ -129,6 +158,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set smarttab
 set autoindent
 set smartindent
 set ignorecase
@@ -140,7 +170,7 @@ set guioptions-=e
 set cursorline
 set colorcolumn=80
 set background=light
-"set background=black
+"set background=dark
 highlight NonText ctermbg=none
 autocmd FileType python setlocal completeopt-=preview
 "set guicursor+=i:ver100-iCursor
@@ -151,7 +181,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 set backspace=indent,eol,start
 " 分割した設定ファイルをすべて読み込む
 set runtimepath+=~/.vim/
-runtime! userautoload/*.vim
+runtime! userautoload/*/*.vim
 
 "autocmd
 " set nocursorline
@@ -205,3 +235,7 @@ vmap gx <Plug>(openbrowser-open)
 "Map your keys
 "nmap <c-i> <Plug>(simple-todo-new)
 "imap <c-i> <Plug>(simple-todo-new)
+"
+"let res = webapi#http#get('http://127.0.0.1:8000/youtube/artist/')
+"let content = webapi#json#decode(res.content)
+"echo content
