@@ -69,7 +69,8 @@ else
                         patch httpd epel-release.noarch the_silver_searcher \
                         tig lsof jq tmux peco \
                         wget \
-                        gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags
+                        gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags \
+                        heroku
 
 
 fi
