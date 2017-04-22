@@ -49,9 +49,10 @@ if [ $(uname -s) = 'Darwin' ]; then
 
     echo "Installing brew apps now"
     brew install vim --with-python3 --without-python --with-lua
-    brew install macvim
+    brew install macvim --with-python3 --without-python --with-lua
     brew install clisp
     brew install git tig tmux
+    brew install heroku
 
     brew tap universal-ctags/universal-ctags
     brew install --HEAD universal-ctags
