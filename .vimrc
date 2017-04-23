@@ -113,6 +113,7 @@ Plug 'tyru/open-browser.vim'
 "
 " ---- // kubocker ---- "
 Plug 'kubocker/cal.vim'
+Plug 'kubocker/japan_postal_code.vim'
 
 call plug#end()
 
