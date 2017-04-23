@@ -32,6 +32,7 @@ Plug 'jmcomets/vim-pony'
 Plug 'vim-scripts/django.vim'
 
 " - ruby
+Plug 'rsense/rsense'
 
 " - go
 Plug 'fatih/vim-go'
@@ -236,6 +237,3 @@ vmap gx <Plug>(openbrowser-open)
 "nmap <c-i> <Plug>(simple-todo-new)
 "imap <c-i> <Plug>(simple-todo-new)
 "
-"let res = webapi#http#get('http://127.0.0.1:8000/youtube/artist/')
-"let content = webapi#json#decode(res.content)
-"echo content
