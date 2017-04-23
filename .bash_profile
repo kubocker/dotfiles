@@ -41,6 +41,9 @@ export PATH=$PATH:~/.composer/vendor/bin
 # nvm
 export NVM_ROOT="$HOME/.nvm"
 [ -s "$NVM_ROOT/nvm.sh" ] && . "$NVM_ROOT/nvm.sh"
+nvm use default
+npm_dir=${NVM_PATH}_modules
+export NODE_PATH=$npm_dir
 
 # swiftenv
 export SWIFTENV_ROOT="$HOME/.swiftenv"
