@@ -23,9 +23,10 @@ Plug 'zcodes/vim-colors-basic'
 " - python
 Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
 Plug 'hdima/python-syntax'
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 Plug 'andviro/flake8-vim'
-Plug 'hynek/vim-python-pep8-indent'
+Plug 'tell-k/vim-autopep8'
+"Plug 'hynek/vim-python-pep8-indent'
 
 " - django
 Plug 'jmcomets/vim-pony'
@@ -33,6 +34,10 @@ Plug 'vim-scripts/django.vim'
 
 " - ruby
 Plug 'rsense/rsense'
+Plug 'Shougo/neocomplcache.vim'
+
+" - rails
+Plug 'tpope/vim-rails'
 
 " - go
 Plug 'fatih/vim-go'
@@ -112,8 +117,9 @@ Plug 'tyru/open-browser.vim'
 "
 "
 " ---- // kubocker ---- "
-Plug 'kubocker/cal.vim'
-Plug 'kubocker/japan_postal_code.vim'
+Plug 'kubocker/cal.vim', { 'do': '~/.install.sh' }
+Plug 'kubocker/japan_postal_code.vim', { 'do': 'pip install Flask' }
+Plug 'kubocker/speed.vim', { 'do': 'pip install TinyDB' }
 
 call plug#end()
 
@@ -128,13 +134,13 @@ if isdirectory(expand("~/.vim/plugged"))
     endif
 
     " ColorScheme "
-    "colorscheme molokai
+    colorscheme molokai
     "colorscheme iceberg
     "colorscheme nordisk
     "colorscheme zazen
     "colorscheme neodark
     "colorscheme sialoquent
-    colorscheme seattle
+    "colorscheme seattle
     "colorscheme petrel
     "colorschem seagull
     "colorschem basic-dark
@@ -171,7 +177,7 @@ set incsearch
 set guioptions-=e
 set cursorline
 set colorcolumn=80
-set background=light
+"set background=light
 "set background=dark
 highlight NonText ctermbg=none
 autocmd FileType python setlocal completeopt-=preview
@@ -201,6 +207,7 @@ nnoremap <Tab>h :History:<CR>
 nnoremap <Tab>f :Files<CR>
 nnoremap <Tab>c :Commits<CR>
 nnoremap <Tab>g :GFiles?<CR>
+nnoremap <Tab>c :Colors<CR>
 
 " vimshell.vim
 nnoremap <silent>vs :VimShell<CR>
@@ -228,6 +235,10 @@ let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
 let g:calendar_diary = '~/Develop/kubocker/work/diary'
+
+
+" kubocker  "
+let g:speed_todo_path = 'Develop/kubocker/work/todo/'
 
 
 let g:netrw_nogx = 1
