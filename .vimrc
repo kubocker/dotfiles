@@ -23,7 +23,7 @@ Plug 'zcodes/vim-colors-basic'
 " - python
 Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
 Plug 'hdima/python-syntax'
-"Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 Plug 'andviro/flake8-vim'
 Plug 'tell-k/vim-autopep8'
 "Plug 'hynek/vim-python-pep8-indent'
@@ -117,8 +117,8 @@ Plug 'tyru/open-browser.vim'
 "
 "
 " ---- // kubocker ---- "
-Plug 'kubocker/cal.vim', { 'do': '~/.install.sh' }
-Plug 'kubocker/japan_postal_code.vim', { 'do': 'pip install Flask' }
+Plug 'kubocker/cal.vim'
+Plug 'kubocker/japan_postal_code.vim'
 Plug 'kubocker/speed.vim', { 'do': 'pip install TinyDB' }
 
 call plug#end()
@@ -134,8 +134,8 @@ if isdirectory(expand("~/.vim/plugged"))
     endif
 
     " ColorScheme "
-    colorscheme molokai
-    "colorscheme iceberg
+    "colorscheme molokai
+    colorscheme iceberg
     "colorscheme nordisk
     "colorscheme zazen
     "colorscheme neodark
@@ -178,7 +178,7 @@ set guioptions-=e
 set cursorline
 set colorcolumn=80
 "set background=light
-"set background=dark
+set background=dark
 highlight NonText ctermbg=none
 autocmd FileType python setlocal completeopt-=preview
 "set guicursor+=i:ver100-iCursor
@@ -190,6 +190,7 @@ set backspace=indent,eol,start
 " 分割した設定ファイルをすべて読み込む
 set runtimepath+=~/.vim/
 runtime! userautoload/*/*.vim
+"runtime! userautoload/*.vim
 
 "autocmd
 " set nocursorline
@@ -236,6 +237,16 @@ let g:memolist_unite_option = '-start-insert'
 " mattn calendar "
 let g:calendar_diary = '~/Develop/kubocker/work/diary'
 
+" jedi "
+"autocmd FileType python setlocal omnifunc=jedi#completions
+"let g:jedi#completions_enabled = 0
+"let g:jedi#auto_vim_configuration = 0
+"if !exists('g:neocomplete#force_omni_input_patterns')
+"    let g:neocomplete#force_omni_input_patterns = {}
+"endif
+
+"g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
 
 " kubocker  "
 let g:speed_todo_path = 'Develop/kubocker/work/todo/'
@@ -248,4 +259,5 @@ vmap gx <Plug>(openbrowser-open)
 "Map your keys
 "nmap <c-i> <Plug>(simple-todo-new)
 "imap <c-i> <Plug>(simple-todo-new)
+command! -nargs=* Go : call Go(<f-args>)
 "
