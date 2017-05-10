@@ -19,6 +19,7 @@
 
 # setting
 kbk_dir=Develop/kubocker/dotfiles
+distr=$(uname -a | awk '{print $2}')
 
 # start
 echo "Start setting of dotfiles..."
@@ -33,6 +34,7 @@ dotfiles=(
     .gvimrc
 	)
 dir=$(pwd)
+
 
 if [ $dir != $HOME/$kbk_dir ]; then
 	echo "WARNING..."
@@ -61,18 +63,25 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew cask update
     brew cask install ccleaner iterm2 vagrant virtualbox karabiner
 
+# Linux
 else
     echo "This is $(uname -s)"
     echo "installing apps..."
-    sudo yum install -y git \
-                        vim --with-python3 --without-python --with-lua \
-                        patch httpd epel-release.noarch the_silver_searcher \
-                        tig lsof jq tmux peco \
-                        wget \
-                        gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags \
-                        heroku
+    if [ $distr =~ "^Debian$" ]; then
+        sudo apt-get install git \
+                             vim --with-python3 --with-python --with-lua \
+                             tig lsof jq tmux peco \
+                             wget
 
-
+    else
+        sudo yum install -y git \
+                            patch httpd epel-release.noarch the_silver_searcher \
+                            tig lsof jq tmux peco \
+                            wget \
+                            gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags \
+                            heroku \
+                            vim --with-python3 --without-python --with-lua \
+    fi
 fi
 
 echo 'Installing... controlling language versions'
