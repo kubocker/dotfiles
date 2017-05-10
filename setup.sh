@@ -60,8 +60,11 @@ if [ $(uname -s) = 'Darwin' ]; then
     echo "Installing brew-cask apps now"
     brew cask update
     brew cask install ccleaner iterm2 vagrant virtualbox karabiner
+    brew cask install java
 
+# Linux
 else
+    # CentOS
     echo "This is $(uname -s)"
     echo "installing apps..."
     sudo yum install -y git \
@@ -85,6 +88,8 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 
 # jenv
 git clone https://github.com/gcuisinier/jenv.git ~/.jenv
+## jenv add $(/usr/libexec/java_home -v 1.8)
+
 
 # phpenv
 curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
