@@ -97,6 +97,7 @@ Plug 'thinca/vim-quickrun'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'mattn/webapi-vim'
 Plug 'Shougo/vimshell.vim'
+Plug 'rking/ag.vim'
 "DB
 Plug 'mattn/vdbi-vim'
 Plug 'vim-scripts/dbext.vim'
