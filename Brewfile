@@ -19,6 +19,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'karabiner'
 cask 'java'
+cask 'android-studio'
 
 mas '1Password', id: 443987910
 mas 'XCode', id: 497799835
