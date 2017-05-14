@@ -47,20 +47,9 @@ if [ $(uname -s) = 'Darwin' ]; then
     [ -z "$(which brew)" ] &&
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    echo "Installing brew apps now"
-    brew install vim --with-python3 --without-python --with-lua
-    brew install macvim --with-python3 --without-python --with-lua
-    brew install clisp
-    brew install git tig tmux
-    brew install heroku
-
-    brew tap universal-ctags/universal-ctags
-    brew install --HEAD universal-ctags
-
-    echo "Installing brew-cask apps now"
-    brew cask update
-    brew cask install ccleaner iterm2 vagrant virtualbox karabiner
-    brew cask install java
+    echo "Brewfile....."
+    brew tap Homebrew/bundle
+    brew bundle
 
 # Linux
 else
