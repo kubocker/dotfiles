@@ -7,6 +7,8 @@ brew 'git'
 brew 'tig'
 brew 'tmux'
 brew 'heroku'
+brew 'ag'
+brew 'peco'
 brew 'mas'
 
 cask 'ccleaner'
