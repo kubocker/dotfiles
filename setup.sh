@@ -62,6 +62,7 @@ else
                         tig lsof jq tmux peco \
                         wget \
                         gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags \
+                        ansible \
                         heroku
 
 
