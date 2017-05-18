@@ -12,6 +12,8 @@ brew 'docker'
 brew 'ag'
 brew 'peco'
 brew 'mas'
+brew 'mercurial'
+brew 'sdl'
 
 cask 'ccleaner'
 cask 'iterm2'
