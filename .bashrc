@@ -56,6 +56,7 @@ promps
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # alias
+alias vi='vim'
 alias ll='`ls | fzf | awk '\''{ print $9 }'\''`'
 alias hh='`history | fzf | awk '\''{ print $1 }'\''`'
 
