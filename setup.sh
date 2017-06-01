@@ -51,6 +51,12 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew tap Homebrew/bundle
     brew bundle
 
+    # Downloads 管理 (local)
+    mkdir $HOME/Downloads/dmgs
+    mkdir $HOME/Downloads/documents
+    mkdir $HOME/Downloads/imgs
+
+
 # Linux
 else
     # CentOS
@@ -62,6 +68,7 @@ else
                         tig lsof jq tmux peco \
                         wget \
                         gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags \
+                        lua-devel ncurses-devel \
                         ansible \
                         heroku
 
