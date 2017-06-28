@@ -48,6 +48,9 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'moll/vim-node'
 "Plug 'burnettk/vim-angular'
 
+" - coffee
+Plug 'kchmck/vim-coffee-script'
+
 " - php
 Plug 'stanangeloff/php.vim'
 Plug 'violetyk/neocomplete-php.vim'

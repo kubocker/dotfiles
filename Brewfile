@@ -14,6 +14,7 @@ brew 'peco'
 brew 'mas'
 brew 'mercurial'
 brew 'sdl'
+brew 'khell/homebrew-srm/srm'
 
 cask 'ccleaner'
 cask 'iterm2'
@@ -23,6 +24,8 @@ cask 'karabiner'
 cask 'java'
 cask 'docker'
 cask 'android-studio'
+cask 'google-chrome'
+cask 'docker-toolbox'
 
-mas '1Password', id: 443987910
-mas 'XCode', id: 497799835
+mas '1Password (6.7)', id: 443987910
+mas 'XCode (8.0)', id: 497799835
