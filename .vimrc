@@ -27,7 +27,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'andviro/flake8-vim'
 Plug 'tell-k/vim-autopep8'
 "Plug 'hynek/vim-python-pep8-indent'
-
+"
 " - django
 Plug 'jmcomets/vim-pony'
 Plug 'vim-scripts/django.vim'
@@ -35,6 +35,7 @@ Plug 'vim-scripts/django.vim'
 " - ruby
 Plug 'rsense/rsense'
 Plug 'Shougo/neocomplcache.vim'
+Plug 'Shougo/neocomplcache-rsense.vim'
 
 " - rails
 Plug 'tpope/vim-rails'
@@ -69,6 +70,7 @@ Plug 'tikhomirov/vim-glsl'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 
+" - html
 
 " ---- // Snippet ---- "
 Plug 'Shougo/neosnippet'
@@ -101,9 +103,12 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'mattn/webapi-vim'
 Plug 'Shougo/vimshell.vim'
 Plug 'rking/ag.vim'
-"DB
+Plug 'soramugi/auto-ctags.vim'
+
+" ---- // DB ---- //
 Plug 'mattn/vdbi-vim'
 Plug 'vim-scripts/dbext.vim'
+
 " ---- // others ---- //
 Plug 'mizukmb/otenki.vim'
 Plug 'osyo-manga/vim-sugarpot'
@@ -250,6 +255,37 @@ let g:calendar_diary = '~/Develop/kubocker/work/diary'
 "endif
 
 "g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
+
+" rsense "
+"" neocomplcacheの設定
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+
+
+" Rsense用の設定
+if !exists('g:neocomplcache_omni_patterns')
+    let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+"rsenseのインストールフォルダがデフォルトと異なるので設定
+let g:rsenseHome = expand("*Rsenseのインストールパスをここにペースト*")
+let g:rsenseUseOmniFunc = 1
 
 
 " kubocker  "

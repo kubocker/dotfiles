@@ -15,6 +15,7 @@ brew 'mas'
 brew 'mercurial'
 brew 'sdl'
 brew 'khell/homebrew-srm/srm'
+brew 'ctags'
 
 cask 'ccleaner'
 cask 'iterm2'
