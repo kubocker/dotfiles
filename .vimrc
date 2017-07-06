@@ -230,6 +230,13 @@ nnoremap <silent>ml :MemoList<CR>
 nnoremap <silent>mg :MemoGrep<CR>
 nmap mf  :FufFile <C-r>=expand(g:memolist_path."/")<CR><CR>
 
+" --------- indent ---------- "
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
 " ---------- global setting ---------- "
 let g:vimshell_interactive_update_time = 10
 let g:vimshell_prompt = $USERNAME."% "
@@ -245,6 +252,13 @@ let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
 let g:calendar_diary = '~/Develop/kubocker/work/diary'
+
+" ctags "
+let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn']
+let g:auto_ctags_tags_name = 'tags'
+let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
+let g:auto_ctags_filetype_mode = 1
 
 " jedi "
 "autocmd FileType python setlocal omnifunc=jedi#completions
