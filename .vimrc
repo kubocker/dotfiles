@@ -36,6 +36,7 @@ Plug 'vim-scripts/django.vim'
 Plug 'rsense/rsense'
 Plug 'Shougo/neocomplcache.vim'
 Plug 'Shougo/neocomplcache-rsense.vim'
+Plug 'scrooloose/syntastic'
 
 " - rails
 Plug 'tpope/vim-rails'
@@ -269,6 +270,17 @@ let g:auto_ctags_filetype_mode = 1
 "endif
 
 "g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+"
+" syntastic "
+let g:syntastic_mode_map = {
+    \ 'mode': 'active',
+    \ 'active_filetypes': ['ruby', 'python', 'javascript'],
+    \ 'passive_filetypes': ['html']
+    \ }
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_auto_loc_list = 1
 
 
 " rsense "
