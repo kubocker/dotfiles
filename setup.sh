@@ -31,6 +31,8 @@ dotfiles=(
     .vimrc
     .bowerrc
     .gvimrc
+    .fabricrc
+    .pypi
 	)
 dir=$(pwd)
 
