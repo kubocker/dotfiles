@@ -36,7 +36,7 @@ Plug 'vim-scripts/django.vim'
 Plug 'rsense/rsense'
 Plug 'Shougo/neocomplcache.vim'
 Plug 'Shougo/neocomplcache-rsense.vim'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 
 " - rails
 Plug 'tpope/vim-rails'
@@ -82,6 +82,7 @@ Plug 'cohama/lexima.vim'
 " ---- //  grep ---- "
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'thinca/vim-quickrun'
 "Plug 'Shougo/vimproc.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -261,6 +262,18 @@ let g:auto_ctags_tags_name = 'tags'
 let g:auto_ctags_tags_args = '--tag-relative --recurse --sort=yes'
 let g:auto_ctags_filetype_mode = 1
 
+" proc "
+let g:quickrun_config = get(g:, 'quickrun_config', {})
+let g:quickrun_config._ = {
+      \ 'runner'    : 'vimproc',
+      \ 'runner/vimproc/updatetime' : 60,
+      \ 'outputter' : 'error',
+      \ 'outputter/error/success' : 'buffer',
+      \ 'outputter/error/error'   : 'quickfix',
+      \ 'outputter/buffer/split'  : ':rightbelow 8sp',
+      \ 'outputter/buffer/close_on_empty' : 1,
+      \ }
+
 " jedi "
 "autocmd FileType python setlocal omnifunc=jedi#completions
 "let g:jedi#completions_enabled = 0
@@ -272,18 +285,18 @@ let g:auto_ctags_filetype_mode = 1
 "g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 "
 " syntastic "
-let g:syntastic_mode_map = {
-    \ 'mode': 'active',
-    \ 'active_filetypes': ['ruby', 'python', 'javascript'],
-    \ 'passive_filetypes': ['html']
-    \ }
-let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_mode_map = {
+"     \ 'mode': 'active',
+"     \ 'active_filetypes': ['ruby', 'python', 'javascript'],
+"     \ 'passive_filetypes': ['html']
+"     \ }
+" let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_enable_signs = 1
+" let g:syntastic_error_symbol = '✗'
+" let g:syntastic_warning_symbol = '⚠'
 
 
 " rsense "
