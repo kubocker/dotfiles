@@ -9,15 +9,14 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " ---- // colorscheme --- "
 Plug 'tomasr/molokai'
 Plug 'zaki/zazen'
-Plug 'encody/nvim'
-Plug 'albertorestifo/github.vim'
-Plug 'kamwitsta/nordisk'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'mbbill/vim-seattle'
 Plug 'cocopon/iceberg.vim'
-Plug 'davidklsn/vim-sialoquent'
 Plug 'nightsense/seabird'
-Plug 'zcodes/vim-colors-basic'
+Plug 'hzchirs/vim-material'
+Plug 'prognostic/plasticine'
+Plug 'vim-scripts/ibmedit.vim'
+Plug 'rhysd/vim-color-spring-night'
 
 " airline "
 Plug 'vim-airline/vim-airline'
@@ -154,13 +153,14 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme iceberg
     "colorscheme nordisk
     "colorscheme zazen
-    "colorscheme neodark
+    colorscheme neodark
     "colorscheme sialoquent
-    colorscheme seattle
+    "colorscheme seattle
     "colorscheme petrel
     "colorschem seagull
-    "colorschem basic-dark
-    "colorschem basic-light
+    "colorscheme vim-material
+    "colorscheme plasticine
+    "colorscheme spring-night
 
 endif
 
@@ -192,8 +192,8 @@ set shiftround
 set incsearch
 set guioptions-=e
 set cursorline
-set colorcolumn=80
-"set background=light
+" set colorcolumn=80
+" set background=light
 set background=dark
 highlight NonText ctermbg=none
 autocmd FileType python setlocal completeopt-=preview
@@ -360,6 +360,9 @@ let g:rsenseUseOmniFunc = 1
 " kubocker  "
 let g:speed_todo_path = 'Develop/kubocker/work/todo/'
 
+" colorscheme
+"let g:airline_theme='material'
+let g:airline_theme='spring_night'
 
 let g:netrw_nogx = 1
 nmap gx <Plug>(openbrowser-open)
