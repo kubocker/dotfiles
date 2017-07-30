@@ -16,6 +16,7 @@ Plug 'nightsense/seabird'
 Plug 'hzchirs/vim-material'
 Plug 'prognostic/plasticine'
 Plug 'vim-scripts/ibmedit.vim'
+Plug 'jacoborus/tender.vim'
 Plug 'rhysd/vim-color-spring-night'
 
 " airline "
@@ -153,7 +154,7 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme iceberg
     "colorscheme nordisk
     "colorscheme zazen
-    colorscheme neodark
+    "colorscheme neodark
     "colorscheme sialoquent
     "colorscheme seattle
     "colorscheme petrel
@@ -161,6 +162,7 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme vim-material
     "colorscheme plasticine
     "colorscheme spring-night
+    colorscheme tender
 
 endif
 
@@ -279,8 +281,8 @@ let g:memolist_unite_source = 'file_rec'
 let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
-"let g:calendar_diary = '~/Develop/kubocker/work/diary'
-let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
+let g:calendar_diary = '~/Develop/kubocker/work/diary'
+"let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
 
 " ctags "
 let g:auto_ctags = 1
