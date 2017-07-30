@@ -19,6 +19,10 @@ Plug 'davidklsn/vim-sialoquent'
 Plug 'nightsense/seabird'
 Plug 'zcodes/vim-colors-basic'
 
+" airline "
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " ---- // autocomplete ---- "
 " - python
 Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
@@ -142,16 +146,17 @@ if isdirectory(expand("~/.vim/plugged"))
     if has('vim_starting') && file_name == ''
     "if has('vim_starting') && git
       autocmd VimEnter * NERDTree ./
+
     endif
 
     " ColorScheme "
     "colorscheme molokai
-    colorscheme iceberg
+    "colorscheme iceberg
     "colorscheme nordisk
     "colorscheme zazen
     "colorscheme neodark
     "colorscheme sialoquent
-    "colorscheme seattle
+    colorscheme seattle
     "colorscheme petrel
     "colorschem seagull
     "colorschem basic-dark
@@ -239,6 +244,27 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
+" NEEDTree File hightlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+    exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+    exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('py',     'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('md',     'blue',    'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml',    'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('config', 'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('conf',   'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('json',   'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('html',   'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('styl',   'cyan',    'none', 'cyan',    '#151515')
+call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
+call NERDTreeHighlightFile('rb',     'Red',     'none', 'red',     '#151515')
+call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
+
+let g:NERDTreeShowBookmarks=1
+
 " ---------- global setting ---------- "
 let g:vimshell_interactive_update_time = 10
 let g:vimshell_prompt = $USERNAME."% "
@@ -253,7 +279,8 @@ let g:memolist_unite_source = 'file_rec'
 let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
-let g:calendar_diary = '~/Develop/kubocker/work/diary'
+"let g:calendar_diary = '~/Develop/kubocker/work/diary'
+let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
 
 " ctags "
 let g:auto_ctags = 1
