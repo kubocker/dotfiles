@@ -281,8 +281,8 @@ let g:memolist_unite_source = 'file_rec'
 let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
-let g:calendar_diary = '~/Develop/kubocker/work/diary'
-"let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
+"let g:calendar_diary = '~/Develop/kubocker/work/diary'
+let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
 
 " ctags "
 let g:auto_ctags = 1
