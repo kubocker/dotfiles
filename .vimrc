@@ -6,6 +6,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" ---- // ---- "
+Plug 'cocopon/vaffle.vim'
+
 " ---- // colorscheme --- "
 Plug 'tomasr/molokai'
 Plug 'zaki/zazen'
@@ -218,6 +221,9 @@ runtime! userautoload/*/*.vim
 " nerdtree
 nnoremap <Space>n :NERDTree<CR>
 
+" vaffle
+nnoremap <Space>v :Vaffle<CR>
+
 " calender.vim
 nnoremap <Space>c :Calendar<CR>
 
@@ -244,7 +250,14 @@ augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
+
+autocmd BufWritePost *.coffee silent make!
+"エラーがあったら別ウィンドウで表示
+autocmd QuickFixCmdPost * nested cwindow | redraw!
+" Ctrl-cで右ウィンドウにコンパイル結果を一時表示する
+nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
 
 " NEEDTree File hightlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -252,6 +265,7 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
     exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
+" language file
 call NERDTreeHighlightFile('py',     'yellow',  'none', 'yellow',  '#151515')
 call NERDTreeHighlightFile('md',     'blue',    'none', '#3366FF', '#151515')
 call NERDTreeHighlightFile('yml',    'yellow',  'none', 'yellow',  '#151515')
@@ -264,6 +278,7 @@ call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
 call NERDTreeHighlightFile('rb',     'Red',     'none', 'red',     '#151515')
 call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('coffee', 'Magenta', 'none', '#ff00ff', '#151515')
 
 let g:NERDTreeShowBookmarks=1
 
