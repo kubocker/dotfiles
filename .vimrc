@@ -8,6 +8,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " ---- // ---- "
 Plug 'cocopon/vaffle.vim'
+Plug 'miyakogi/seiya.vim'
 
 " ---- // colorscheme --- "
 Plug 'tomasr/molokai'
@@ -21,6 +22,7 @@ Plug 'prognostic/plasticine'
 Plug 'vim-scripts/ibmedit.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'rhysd/vim-color-spring-night'
+Plug 'chriskempson/vim-tomorrow-theme'
 
 " airline "
 Plug 'vim-airline/vim-airline'
@@ -163,9 +165,9 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme petrel
     "colorschem seagull
     "colorscheme vim-material
-    "colorscheme plasticine
+    colorscheme plasticine
     "colorscheme spring-night
-    colorscheme tender
+    "colorscheme tender
 
 endif
 
@@ -199,7 +201,7 @@ set guioptions-=e
 set cursorline
 " set colorcolumn=80
 " set background=light
-set background=dark
+" set background=dark
 highlight NonText ctermbg=none
 autocmd FileType python setlocal completeopt-=preview
 "set guicursor+=i:ver100-iCursor

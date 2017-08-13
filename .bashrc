@@ -24,6 +24,7 @@ function promps {
     local LIGHTPURPLE="\[\e[1;35m\]"
     local LIGHTRED="\[\e[1;31m\]"
     local LIGHTGREEN="\[\e[1;32m\]"
+    local BACKGROUND_RED="\[\e[41m\]"
 
     case $TERM in
         xterm*) TITLEBAR='\[\e]0;\W\007\]';;
@@ -42,7 +43,7 @@ function promps {
         #export LSCOLORS=xhfxcxdxbxegedabagacad
         alias ls='ls -G'
 
-        PS1="${TITLEBAR}${LIGHTGREEN}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${BLUE}\$${WHITE} "
+        PS1="${TITLEBAR}${BACKGROUND_RED}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${BLUE}\$${WHITE} "
 
     # linux
     else
