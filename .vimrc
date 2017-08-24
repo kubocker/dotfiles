@@ -7,8 +7,8 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " ---- // ---- "
-Plug 'cocopon/vaffle.vim'
-Plug 'miyakogi/seiya.vim'
+" Plug 'cocopon/vaffle.vim'
+" Plug 'miyakogi/seiya.vim'
 
 " ---- // colorscheme --- "
 Plug 'tomasr/molokai'
@@ -38,8 +38,8 @@ Plug 'tell-k/vim-autopep8'
 "Plug 'hynek/vim-python-pep8-indent'
 "
 " - django
-Plug 'jmcomets/vim-pony'
-Plug 'vim-scripts/django.vim'
+" Plug 'jmcomets/vim-pony'
+" Plug 'vim-scripts/django.vim'
 
 " - ruby
 Plug 'rsense/rsense'
@@ -55,16 +55,21 @@ Plug 'fatih/vim-go'
 
 " - javascript
 Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
+" Plug 'jelera/vim-javascript-syntax'
+" Plug 'hallettj/jslint.vim'
 Plug 'moll/vim-node'
-"Plug 'burnettk/vim-angular'
+Plug 'burnettk/vim-angular'
+Plug 'bdauria/angular-cli.vim'
+" Plug 'teramako/jscomplete-vim'
+Plug 'mattn/jscomplete-vim'
+Plug 'myhere/vim-nodejs-complete'
 
 " - coffee
 Plug 'kchmck/vim-coffee-script'
 
 " - php
-Plug 'stanangeloff/php.vim'
-Plug 'violetyk/neocomplete-php.vim'
+" Plug 'stanangeloff/php.vim'
+" Plug 'violetyk/neocomplete-php.vim'
 
 " - swift
 Plug 'keith/swift.vim'
@@ -116,12 +121,15 @@ Plug 'Shougo/vimshell.vim'
 Plug 'rking/ag.vim'
 Plug 'soramugi/auto-ctags.vim'
 
+" ---- // window ---- "
+Plug 'simeji/winresizer'
+
 " ---- // DB ---- //
-Plug 'mattn/vdbi-vim'
-Plug 'vim-scripts/dbext.vim'
+" Plug 'mattn/vdbi-vim'
+" Plug 'vim-scripts/dbext.vim'
 
 " ---- // others ---- //
-Plug 'mizukmb/otenki.vim'
+" Plug 'mizukmb/otenki.vim'
 Plug 'osyo-manga/vim-sugarpot'
 Plug 'mattn/calendar-vim'
 "Plug 'itchyny/calendar.vim'
@@ -137,9 +145,9 @@ Plug 'tyru/open-browser.vim'
 "
 "
 " ---- // kubocker ---- "
-Plug 'kubocker/cal.vim'
-Plug 'kubocker/japan_postal_code.vim'
-Plug 'kubocker/speed.vim', { 'do': 'pip install TinyDB' }
+" Plug 'kubocker/cal.vim'
+" Plug 'kubocker/japan_postal_code.vim'
+" Plug 'kubocker/speed.vim', { 'do': 'pip install TinyDB' }
 
 call plug#end()
 
@@ -161,13 +169,14 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme zazen
     "colorscheme neodark
     "colorscheme sialoquent
-    "colorscheme seattle
+    colorscheme seattle
     "colorscheme petrel
     "colorschem seagull
     "colorscheme vim-material
-    colorscheme plasticine
+    "colorscheme plasticine
     "colorscheme spring-night
     "colorscheme tender
+    "colorscheme darkblue
 
 endif
 
@@ -199,9 +208,10 @@ set shiftround
 set incsearch
 set guioptions-=e
 set cursorline
-" set colorcolumn=80
+"set nocursorline
+set colorcolumn=80
 " set background=light
-" set background=dark
+set background=dark
 highlight NonText ctermbg=none
 autocmd FileType python setlocal completeopt-=preview
 "set guicursor+=i:ver100-iCursor
@@ -247,11 +257,36 @@ nnoremap <silent>ml :MemoList<CR>
 nnoremap <silent>mg :MemoGrep<CR>
 nmap mf  :FufFile <C-r>=expand(g:memolist_path."/")<CR><CR>
 
+
+" insert modeで開始
+let g:unite_enable_start_insert = 1
+
+" 大文字小文字を区別しない
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
+
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+
+" grep検索結果の再呼出
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 " --------- indent ---------- "
 augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
@@ -327,7 +362,11 @@ let g:quickrun_config._ = {
 "if !exists('g:neocomplete#force_omni_input_patterns')
 "    let g:neocomplete#force_omni_input_patterns = {}
 "endif
-
+"
+" widnow "
+let g:winresizer_enable = 1
+let g:winresizer_gui_enable = 1
+let g:winresizer_start_key = '<C-W>'
 "g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 "
 " syntastic "
@@ -390,5 +429,5 @@ vmap gx <Plug>(openbrowser-open)
 "Map your keys
 "nmap <c-i> <Plug>(simple-todo-new)
 "imap <c-i> <Plug>(simple-todo-new)
-command! -nargs=* Go : call Go(<f-args>)
+" command! -nargs=* Go : call Go(<f-args>)
 "
