@@ -51,7 +51,7 @@ Plug 'Shougo/neocomplcache-rsense.vim'
 Plug 'tpope/vim-rails'
 
 " - go
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 
 " - javascript
 Plug 'pangloss/vim-javascript'
@@ -74,11 +74,6 @@ Plug 'kchmck/vim-coffee-script'
 " - swift
 Plug 'keith/swift.vim'
 
-" - c sharp
-"Plug 'OmniSharp/omnisharp-vim'
-"Plug 'OmniSharp/omnisharp-vim', { 'autoload': { 'filetypes':  ['cs', 'csi', 'csx'] }, 'build': { 'mac': 'xbuild/server/OmniSharp.sln', 'unix': 'xbuild/server/OmniSharp.sln'} }
-"Plug 'OrangeT/vim-csharp'
-"
 "
 Plug 'tpope/vim-dispatch'
 Plug 'tikhomirov/vim-glsl'
@@ -255,7 +250,7 @@ nnoremap <silent>vp :VimeShellPop<CR>
 nnoremap <silent>mn :MemoNew<CR>
 nnoremap <silent>ml :MemoList<CR>
 nnoremap <silent>mg :MemoGrep<CR>
-nmap mf  :FufFile <C-r>=expand(g:memolist_path."/")<CR><CR>
+nmap mf :FufFile <C-r>=expand(g:memolist_path."/")<CR><CR>
 
 
 " insert modeで開始
