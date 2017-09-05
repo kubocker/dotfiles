@@ -29,6 +29,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " ---- // autocomplete ---- "
+Plug 'sheerun/vim-polyglot'
+
 " - python
 Plug 'lambdalisue/vim-pyenv', { 'depends': ['davidhalter/jedi-vim'], 'autoload': { 'filetypes': ['python', 'python3'], } }
 Plug 'hdima/python-syntax'
@@ -52,6 +54,9 @@ Plug 'tpope/vim-rails'
 
 " - go
 " Plug 'fatih/vim-go'
+"
+" - kotlin
+Plug 'udalov/kotlin-vim'
 
 " - javascript
 Plug 'pangloss/vim-javascript'
@@ -72,7 +77,7 @@ Plug 'kchmck/vim-coffee-script'
 " Plug 'violetyk/neocomplete-php.vim'
 
 " - swift
-Plug 'keith/swift.vim'
+"Plug 'keith/swift.vim'
 
 "
 Plug 'tpope/vim-dispatch'
@@ -115,6 +120,8 @@ Plug 'mattn/webapi-vim'
 Plug 'Shougo/vimshell.vim'
 Plug 'rking/ag.vim'
 Plug 'soramugi/auto-ctags.vim'
+" Plug 'yuratomo/gmail.vim'
+Plug 'danchoi/vmail'
 
 " ---- // window ---- "
 Plug 'simeji/winresizer'
@@ -420,6 +427,11 @@ let g:airline_theme='spring_night'
 let g:netrw_nogx = 1
 nmap gx <Plug>(openbrowser-open)
 vmap gx <Plug>(openbrowser-open)
+
+" gmail "
+" let g:gmail_imap = 'imap.gmail.com:993'
+" let g:gmail_smtp = 'smtp.gmail.com:465'
+" let g:gmail_user_name = 'russianroulette.3511@gmail.com'
 
 "Map your keys
 "nmap <c-i> <Plug>(simple-todo-new)
