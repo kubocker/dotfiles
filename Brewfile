@@ -16,6 +16,7 @@ brew 'mercurial'
 brew 'sdl'
 brew 'khell/homebrew-srm/srm'
 brew 'ctags'
+brew 'maven'
 
 cask 'ccleaner'
 cask 'iterm2'
@@ -27,6 +28,7 @@ cask 'docker'
 cask 'android-studio'
 cask 'google-chrome'
 cask 'docker-toolbox'
+cask 'sts'
 
 mas '1Password (6.7)', id: 443987910
 mas 'XCode (8.0)', id: 497799835
