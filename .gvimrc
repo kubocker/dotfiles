@@ -27,4 +27,6 @@ set background=dark
 "colorscheme sialoquent
 "colorscheme seattle
 colorscheme vim-material
+"colorscheme plasticine
 "colorscheme tender
+"colorscheme darkblue
