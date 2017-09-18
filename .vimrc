@@ -292,8 +292,8 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.java setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.kt setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
-    autocmd BufNewFile,BufRead *.coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 autocmd BufWritePost *.coffee silent make!
@@ -339,8 +339,8 @@ let g:memolist_unite_source = 'file_rec'
 let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
-"let g:calendar_diary = '~/Develop/kubocker/work/diary'
-let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
+let g:calendar_diary = '~/Develop/kubocker/work/diary'
+"let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
 
 " ctags "
 let g:auto_ctags = 1
@@ -362,12 +362,12 @@ let g:quickrun_config._ = {
       \ }
 
 " jedi "
-"autocmd FileType python setlocal omnifunc=jedi#completions
-"let g:jedi#completions_enabled = 0
-"let g:jedi#auto_vim_configuration = 0
-"if !exists('g:neocomplete#force_omni_input_patterns')
-"    let g:neocomplete#force_omni_input_patterns = {}
-"endif
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
 "
 " widnow "
 let g:winresizer_enable = 1
