@@ -64,16 +64,17 @@ Plug 'udalov/kotlin-vim'
 " - javascript
 Plug 'pangloss/vim-javascript'
 " Plug 'jelera/vim-javascript-syntax'
-" Plug 'hallettj/jslint.vim'
+Plug 'hallettj/jslint.vim'
+Plug 'posva/vim-vue'
 Plug 'moll/vim-node'
 Plug 'burnettk/vim-angular'
-Plug 'bdauria/angular-cli.vim'
+" Plug 'bdauria/angular-cli.vim'
 " Plug 'teramako/jscomplete-vim'
 Plug 'mattn/jscomplete-vim'
 Plug 'myhere/vim-nodejs-complete'
 
 " - coffee
-Plug 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 
 " - php
 " Plug 'stanangeloff/php.vim'
@@ -294,6 +295,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.java setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.kt setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 autocmd BufWritePost *.coffee silent make!
