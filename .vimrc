@@ -228,7 +228,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 set backspace=indent,eol,start
 " 分割した設定ファイルをすべて読み込む
 set runtimepath+=~/.vim/
-runtime! userautoload/*/*.vim
+"runtime! userautoload/*/*.vim
 "runtime! userautoload/*.vim
 
 "autocmd
