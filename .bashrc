@@ -62,3 +62,7 @@ alias ll='`ls | fzf | awk '\''{ print $9 }'\''`'
 alias hh='`history | fzf | awk '\''{ print $1 }'\''`'
 
 #tmux
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/kubocker/.sdkman"
+[[ -s "/Users/kubocker/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"

@@ -93,7 +93,6 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 git clone https://github.com/gcuisinier/jenv.git ~/.jenv
 ## jenv add $(/usr/libexec/java_home -v 1.8)
 
-
 # phpenv
 curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
 git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
@@ -106,6 +105,12 @@ git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
 
 # goenv
 git clone https://github.com/wfarr/goenv.git ~/.goenv
+
+# SDKMAN
+curl -s https://get.sdkman.io | bash
+source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
+sdk install kotlin
+
 
 echo 'git prompt'
 # git-prompt
