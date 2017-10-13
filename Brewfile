@@ -17,6 +17,8 @@ brew 'sdl'
 brew 'khell/homebrew-srm/srm'
 brew 'ctags'
 brew 'maven'
+brew 'doxygen'
+brew 'graphviz'
 
 cask 'ccleaner'
 cask 'iterm2'
