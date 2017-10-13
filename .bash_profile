@@ -56,3 +56,11 @@ eval "$(goenv init -)"
 
 # ansible
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kubocker/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kubocker/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/completion.bash.inc'; fi
+
+export GOOGLE_APPLICATION_CREDENTIALS='/Users/kubocker/.config/gcloud/application_default_credentials.json'
