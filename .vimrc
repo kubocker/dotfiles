@@ -44,16 +44,17 @@ Plug 'tell-k/vim-autopep8'
 " Plug 'vim-scripts/django.vim'
 
 " - ruby
-Plug 'rsense/rsense'
-Plug 'Shougo/neocomplcache.vim'
-Plug 'Shougo/neocomplcache-rsense.vim'
+" Plug 'rsense/rsense'
+" Plug 'Shougo/neocomplcache.vim'
+" Plug 'Shougo/neocomplcache-rsense.vim'
 " Plug 'scrooloose/syntastic'
 
 " - rails
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 
 " - go
 " Plug 'fatih/vim-go'
+
 " - java
 Plug 'rudes/vim-java'
 Plug 'artur-shaik/vim-javacomplete2'
@@ -64,7 +65,7 @@ Plug 'udalov/kotlin-vim'
 " - javascript
 Plug 'pangloss/vim-javascript'
 " Plug 'jelera/vim-javascript-syntax'
-Plug 'hallettj/jslint.vim'
+" Plug 'hallettj/jslint.vim'
 Plug 'posva/vim-vue'
 Plug 'moll/vim-node'
 Plug 'burnettk/vim-angular'
@@ -73,8 +74,9 @@ Plug 'burnettk/vim-angular'
 Plug 'mattn/jscomplete-vim'
 Plug 'myhere/vim-nodejs-complete'
 
-" - coffee
-" Plug 'kchmck/vim-coffee-script'
+" - ecmascript
+Plug 'scrooloose/syntastic'
+Plug 'pmsorhaindo/syntastic-local-eslint.vim'
 
 " - php
 " Plug 'stanangeloff/php.vim'
@@ -85,7 +87,7 @@ Plug 'myhere/vim-nodejs-complete'
 
 "
 Plug 'tpope/vim-dispatch'
-Plug 'tikhomirov/vim-glsl'
+" Plug 'tikhomirov/vim-glsl'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 
@@ -173,9 +175,8 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme iceberg
     "colorscheme nordisk
     "colorscheme zazen
-    "colorscheme neodark
-    "colorscheme sialoquent
-    colorscheme seattle
+    colorscheme neodark
+    "colorscheme seattle
     "colorscheme petrel
     "colorschem seagull
     "colorscheme vim-material
@@ -294,7 +295,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.java setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.kt setlocal tabstop=4 softtabstop=4 shiftwidth=4
-    autocmd BufNewFile,BufRead *.js setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
@@ -335,13 +336,13 @@ let g:calendar_google_task = 1
 "Disable default key bindings
 "let g:simple_todo_map_keys = 0
 "let g:memolist_path = '~/memo'
-let g:memolist_path = "~/Develop/kubocker/memo"
+let g:memolist_path = "~/Develop/kubocker/kubocker/memo"
 let g:memolist_unite        = 1
 let g:memolist_unite_source = 'file_rec'
 let g:memolist_unite_option = '-start-insert'
 
 " mattn calendar "
-let g:calendar_diary = '~/Develop/kubocker/work/diary'
+"let g:calendar_diary = '~/Develop/kubocker/work/diary'
 "let g:calendar_diary = '~/Develop/kubocker/memo/work/diary'
 
 " ctags "
@@ -383,13 +384,13 @@ let g:winresizer_start_key = '<C-W>'
 "     \ 'active_filetypes': ['ruby', 'python', 'javascript'],
 "     \ 'passive_filetypes': ['html']
 "     \ }
-" let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_ruby_checkers = ['rubocop']
-" let g:syntastic_javascript_checkers = ['jshint']
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_enable_signs = 1
-" let g:syntastic_error_symbol = '✗'
-" let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eshint']
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 
 
 " rsense "
@@ -424,15 +425,28 @@ let g:rsenseUseOmniFunc = 1
 
 
 " kubocker  "
-let g:speed_todo_path = 'Develop/kubocker/work/todo/'
+" let g:speed_todo_path = 'Develop/kubocker/work/todo/'
 
 " colorscheme
-"let g:airline_theme='material'
-let g:airline_theme='spring_night'
+" let g:airline_theme='material'
+" let g:airline_theme='spring_night'
+"
+" ecmascript "
+let g:syntastic_javascript_checkers=['eslint']
+" エラー行に sign を表示
+let g:syntastic_enable_signs = 1
+" location list を常に更新
+let g:syntastic_always_populate_loc_list = 0
+" location list を常に表示
+let g:syntastic_auto_loc_list = 0
+" ファイルを開いた時にチェックを実行する
+let g:syntastic_check_on_open = 1
+" :wq で終了する時もチェックする
+let g:syntastic_check_on_wq = 0
 
-let g:netrw_nogx = 1
-nmap gx <Plug>(openbrowser-open)
-vmap gx <Plug>(openbrowser-open)
+" let g:netrw_nogx = 1
+" nmap gx <Plug>(openbrowser-open)
+" vmap gx <Plug>(openbrowser-open)
 
 " gmail "
 " let g:gmail_imap = 'imap.gmail.com:993'
