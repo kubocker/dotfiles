@@ -63,16 +63,17 @@ Plug 'artur-shaik/vim-javacomplete2'
 Plug 'udalov/kotlin-vim'
 
 " - javascript
-Plug 'pangloss/vim-javascript'
-" Plug 'jelera/vim-javascript-syntax'
-" Plug 'hallettj/jslint.vim'
 Plug 'posva/vim-vue'
 Plug 'moll/vim-node'
-Plug 'burnettk/vim-angular'
-" Plug 'bdauria/angular-cli.vim'
-" Plug 'teramako/jscomplete-vim'
 Plug 'mattn/jscomplete-vim'
 Plug 'myhere/vim-nodejs-complete'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+" Plug 'jelera/vim-javascript-syntax'
+" Plug 'hallettj/jslint.vim'
+" Plug 'burnettk/vim-angular'
+" Plug 'bdauria/angular-cli.vim'
+" Plug 'teramako/jscomplete-vim'
 
 " - ecmascript
 Plug 'scrooloose/syntastic'
@@ -83,13 +84,13 @@ Plug 'pmsorhaindo/syntastic-local-eslint.vim'
 " Plug 'violetyk/neocomplete-php.vim'
 
 " - swift
-"Plug 'keith/swift.vim'
+" Plug 'keith/swift.vim'
 
 "
-Plug 'tpope/vim-dispatch'
 " Plug 'tikhomirov/vim-glsl'
-"Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
+Plug 'tpope/vim-dispatch'
 
 " - html
 
