@@ -19,6 +19,9 @@ brew 'ctags'
 brew 'maven'
 brew 'doxygen'
 brew 'graphviz'
+brew 'mongodb'
+brew 'brew-cask'
+brew 'redis'
 
 cask 'ccleaner'
 cask 'iterm2'
@@ -31,6 +34,7 @@ cask 'android-studio'
 cask 'google-chrome'
 cask 'docker-toolbox'
 cask 'sts'
+cask 'spectacle'
 
 mas '1Password (6.7)', id: 443987910
 mas 'XCode (8.0)', id: 497799835

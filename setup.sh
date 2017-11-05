@@ -48,7 +48,8 @@ if [ $(uname -s) = 'Darwin' ]; then
     # Homebrew
     [ -z "$(which brew)" ] &&
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
-        
+    
+    brew update
 
     echo "Brewfile....."
     brew tap Homebrew/bundle
@@ -138,8 +139,8 @@ do
 done
 
 # kbk vims
-git clone git@github.com:kubocker/userautoload.git $HOME/Develop/kubocker/userautoload
-ln -nfs $HOME/Develop/kubocker/userautoload $HOME/.vim/userautoload
+# git clone git@github.com:kubocker/userautoload.git $HOME/Develop/kubocker/userautoload
+# ln -nfs $HOME/Develop/kubocker/userautoload $HOME/.vim/userautoload
 
 # vim-plug
 echo "Installing Vim Plugin"
