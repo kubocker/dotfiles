@@ -78,9 +78,9 @@ else
 
 fi
 
-mkdir $HOME/Develop/kubocker/kubocker
-mkdir $HOME/Develop/kubocker/study
-mkdir $HOME/Develop/kubocker/app
+# mkdir $HOME/Develop/kubocker/kubocker
+# mkdir $HOME/Develop/kubocker/study
+# mkdir $HOME/Develop/kubocker/app
 
 echo 'Installing... controlling language versions'
 # pyenv

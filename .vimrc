@@ -64,11 +64,18 @@ Plug 'udalov/kotlin-vim'
 
 " - javascript
 Plug 'posva/vim-vue'
-Plug 'moll/vim-node'
-Plug 'mattn/jscomplete-vim'
-Plug 'myhere/vim-nodejs-complete'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/html5.vim'
+Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
+" Plug 'moll/vim-node'
+" Plug 'mattn/jscomplete-vim'
+" Plug 'myhere/vim-nodejs-complete'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
 " Plug 'jelera/vim-javascript-syntax'
 " Plug 'hallettj/jslint.vim'
 " Plug 'burnettk/vim-angular'
@@ -89,8 +96,7 @@ Plug 'pmsorhaindo/syntastic-local-eslint.vim'
 "
 " Plug 'tikhomirov/vim-glsl'
 " Plug 'Valloric/YouCompleteMe'
-Plug 'ternjs/tern_for_vim'
-Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-dispatch'
 
 " - html
 
@@ -98,13 +104,12 @@ Plug 'tpope/vim-dispatch'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
-Plug 'cohama/lexima.vim'
+" Plug 'cohama/lexima.vim'
 
 " ---- //  grep ---- "
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'thinca/vim-quickrun'
-"Plug 'Shougo/vimproc.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -387,7 +392,7 @@ let g:winresizer_start_key = '<C-W>'
 "     \ }
 let g:syntastic_python_checkers = ['pylint']
 " let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_javascript_checkers = ['eshint']
+" let g:syntastic_javascript_checkers = ['eshint']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
