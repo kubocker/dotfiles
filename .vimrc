@@ -56,21 +56,21 @@ Plug 'tell-k/vim-autopep8'
 " Plug 'fatih/vim-go'
 
 " - java
-Plug 'rudes/vim-java'
-Plug 'artur-shaik/vim-javacomplete2'
+" Plug 'rudes/vim-java'
+" Plug 'artur-shaik/vim-javacomplete2'
 
 " - kotlin
-Plug 'udalov/kotlin-vim'
+" Plug 'udalov/kotlin-vim'
 
 " - javascript
-Plug 'posva/vim-vue'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/html5.vim'
-Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
+" Plug 'posva/vim-vue'
+" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'othree/html5.vim'
+" Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
 " Plug 'moll/vim-node'
 " Plug 'mattn/jscomplete-vim'
 " Plug 'myhere/vim-nodejs-complete'
@@ -83,8 +83,8 @@ Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'np
 " Plug 'teramako/jscomplete-vim'
 
 " - ecmascript
-Plug 'scrooloose/syntastic'
-Plug 'pmsorhaindo/syntastic-local-eslint.vim'
+" Plug 'scrooloose/syntastic'
+" Plug 'pmsorhaindo/syntastic-local-eslint.vim'
 
 " - php
 " Plug 'stanangeloff/php.vim'
@@ -104,7 +104,7 @@ Plug 'pmsorhaindo/syntastic-local-eslint.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
-" Plug 'cohama/lexima.vim'
+Plug 'cohama/lexima.vim'
 
 " ---- //  grep ---- "
 Plug 'Shougo/unite.vim'
@@ -132,7 +132,7 @@ Plug 'mattn/webapi-vim'
 Plug 'Shougo/vimshell.vim'
 Plug 'rking/ag.vim'
 Plug 'soramugi/auto-ctags.vim'
-" Plug 'yuratomo/gmail.vim'
+Plug 'yuratomo/gmail.vim'
 Plug 'danchoi/vmail'
 
 " ---- // window ---- "
@@ -144,18 +144,18 @@ Plug 'simeji/winresizer'
 
 " ---- // others ---- //
 " Plug 'mizukmb/otenki.vim'
-Plug 'osyo-manga/vim-sugarpot'
-Plug 'mattn/calendar-vim'
-"Plug 'itchyny/calendar.vim'
-"Plug 'vitalk/vim-simple-todo'
+" Plug 'osyo-manga/vim-sugarpot'
+" Plug 'mattn/calendar-vim'
+" Plug 'itchyny/calendar.vim'
+" Plug 'vitalk/vim-simple-todo'
 Plug 'glidenote/memolist.vim'
-Plug 'vim-scripts/L9'
-Plug 'vim-scripts/FuzzyFinder'
-Plug 'vim-scripts/vim-auto-save'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'tyru/open-browser.vim'
-"Plug 'plasticboy/vim-markdown'
-"Plug 'kannokanno/previm'
+" Plug 'vim-scripts/L9'
+" Plug 'vim-scripts/FuzzyFinder'
+" Plug 'vim-scripts/vim-auto-save'
+" Plug 'dhruvasagar/vim-table-mode'
+" Plug 'tyru/open-browser.vim'
+" Plug 'plasticboy/vim-markdown'
+" Plug 'kannokanno/previm'
 "
 "
 " ---- // kubocker ---- "
@@ -288,11 +288,11 @@ nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W
 nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
 
 " unite grep に ag(The Silver Searcher) を使う
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
+" if executable('ag')
+"   let g:unite_source_grep_command = 'ag'
+"   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+"   let g:unite_source_grep_recursive_opt = ''
+" endif
 
 " --------- indent ---------- "
 augroup fileTypeIndent
@@ -332,7 +332,6 @@ call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('java',   'Magenta', 'none', '#ff00ff', '#151515')
 
-let g:NERDTreeShowBookmarks=1
 
 " ---------- global setting ---------- "
 let g:vimshell_interactive_update_time = 10
@@ -342,7 +341,7 @@ let g:calendar_google_task = 1
 "Disable default key bindings
 "let g:simple_todo_map_keys = 0
 "let g:memolist_path = '~/memo'
-let g:memolist_path = "~/Develop/kubocker/kubocker/memo"
+let g:memolist_path = "~/Develop/kubocker/memo"
 let g:memolist_unite        = 1
 let g:memolist_unite_source = 'file_rec'
 let g:memolist_unite_option = '-start-insert'

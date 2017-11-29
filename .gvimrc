@@ -22,11 +22,11 @@ set background=dark
 "colorscheme molokai
 "colorscheme iceberg
 "colorscheme nordisk
-"colorscheme zazen
+colorscheme zazen
 "colorscheme neodark
 "colorscheme sialoquent
 "colorscheme seattle
-colorscheme vim-material
+"colorscheme vim-material
 "colorscheme plasticine
 "colorscheme tender
 "colorscheme darkblue
