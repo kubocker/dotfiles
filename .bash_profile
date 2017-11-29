@@ -57,6 +57,10 @@ eval "$(goenv init -)"
 # ansible
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# Android-Studio
+export ANDROID_HOME="/Users/kubocker/Library/Android/sdk"
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kubocker/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/path.bash.inc'; fi
 
