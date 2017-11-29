@@ -22,6 +22,7 @@ brew 'graphviz'
 brew 'mongodb'
 brew 'brew-cask'
 brew 'redis'
+brew 'reattach-to-user-namespace'
 
 cask 'ccleaner'
 cask 'iterm2'
