@@ -21,3 +21,12 @@ edit dotfiles directory at $kbk_dir
 ```bash
 $ source setup.sh
 ```
+
+[todo]
+#### 2017/12/01 now
+- [ ] emacs settings
+- [ ] spacemacs settings
+- [ ] atom, atom-ide settings
+- [ ] memolist.vim -> .vimrc fix
+- [ ] lisp
+- [ ] clang
