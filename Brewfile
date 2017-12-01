@@ -23,6 +23,7 @@ brew 'mongodb'
 brew 'brew-cask'
 brew 'redis'
 brew 'reattach-to-user-namespace'
+brew 'roswell'
 
 cask 'ccleaner'
 cask 'iterm2'
