@@ -53,6 +53,7 @@ if [ $(uname -s) = 'Darwin' ]; then
 
     echo "Brewfile....."
     brew tap Homebrew/bundle
+    brew tap caskroom/cask
     brew bundle
 
     # Downloads 管理 (local)
@@ -135,7 +136,7 @@ do
   if [ -e $HOME/$file ]; then
     rm -f $HOME/$file
   fi
-  ln -s $dir/$file $HOME/$file
+  ln -s $dir/dotfiles/$file $HOME/$file
 done
 
 # kbk vims
