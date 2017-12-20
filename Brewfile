@@ -24,6 +24,8 @@ brew 'brew-cask'
 brew 'redis'
 brew 'reattach-to-user-namespace'
 brew 'roswell'
+brew 'springboot'
+brew 'gradle'
 
 cask 'ccleaner'
 cask 'iterm2'
@@ -37,6 +39,7 @@ cask 'google-chrome'
 cask 'docker-toolbox'
 cask 'sts'
 cask 'spectacle'
+cask 'filezilla'
 
 mas '1Password (6.7)', id: 443987910
 mas 'XCode (8.0)', id: 497799835

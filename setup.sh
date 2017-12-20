@@ -54,6 +54,7 @@ if [ $(uname -s) = 'Darwin' ]; then
     echo "Brewfile....."
     brew tap Homebrew/bundle
     brew tap caskroom/cask
+    brew tap pivotal/tap
     brew bundle
 
     # Downloads 管理 (local)
@@ -111,7 +112,9 @@ git clone https://github.com/wfarr/goenv.git ~/.goenv
 # SDKMAN
 curl -s https://get.sdkman.io | bash
 source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
+sdk selfupdate force
 sdk install kotlin
+sdk install maven
 
 
 echo 'git prompt'
