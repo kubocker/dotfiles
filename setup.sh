@@ -115,6 +115,10 @@ source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
 sdk selfupdate force
 sdk install kotlin
 sdk install maven
+sdk install springboot
+
+# stack -> haskell
+curl -sSL https://get.haskellstack.org/ | sh
 
 
 echo 'git prompt'
