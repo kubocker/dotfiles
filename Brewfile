@@ -26,6 +26,7 @@ brew 'reattach-to-user-namespace'
 brew 'roswell'
 brew 'springboot'
 brew 'gradle'
+brew 'jq'
 
 cask 'ccleaner'
 cask 'iterm2'
