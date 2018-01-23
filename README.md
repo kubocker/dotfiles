@@ -2,14 +2,6 @@
 
 [set up]
 ```bash
-$ git clone https://github.com/kubocker/dotfiles <your path>
-$ cd <your path>/dotfiles
-$ vim setup.sh
-```
-or
-
-do not install "dotfiles" with git command
-```bash
 $ curl -L -O https://github.com/kubocker/dotfiles/tarball/master
 $ tar xvf master
 $ mv kubocker-master-*** dotfiles
@@ -26,7 +18,10 @@ $ source setup.sh
 #### 2017/12/01 now
 - [ ] emacs settings
 - [ ] spacemacs settings
-- [ ] atom, atom-ide settings
+- [x] atom, atom-ide settings -> delete
 - [ ] memolist.vim -> .vimrc fix
 - [ ] lisp
 - [ ] clang
+
+#### 2018/01/23 now
+- docker + dotfiles
