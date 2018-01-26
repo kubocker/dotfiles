@@ -118,6 +118,7 @@ sdk install maven
 sdk install springboot
 sdk install sbt
 sdk install scala
+sdk install spark
 
 # stack -> haskell
 curl -sSL https://get.haskellstack.org/ | sh
