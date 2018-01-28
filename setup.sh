@@ -96,18 +96,8 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 git clone https://github.com/gcuisinier/jenv.git ~/.jenv
 ## jenv add $(/usr/libexec/java_home -v 1.8)
 
-# phpenv
-curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
-git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
-
 # nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
-
-# swiftenv
-git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
-
-# goenv
-git clone https://github.com/wfarr/goenv.git ~/.goenv
 
 # SDKMAN
 curl -s https://get.sdkman.io | bash
@@ -123,6 +113,13 @@ sdk install spark
 # stack -> haskell
 curl -sSL https://get.haskellstack.org/ | sh
 
+# phpenv
+## curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
+## git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
+# swiftenv
+## git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
+# goenv
+## git clone https://github.com/wfarr/goenv.git ~/.goenv
 
 echo 'git prompt'
 # git-prompt
