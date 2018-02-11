@@ -62,7 +62,6 @@ if [ $(uname -s) = 'Darwin' ]; then
     mkdir $HOME/Downloads/documents
     mkdir $HOME/Downloads/imgs
 
-
 # Linux
 else
     # CentOS
@@ -79,10 +78,6 @@ else
                         heroku
 
 fi
-
-# mkdir $HOME/Develop/kubocker/kubocker
-# mkdir $HOME/Develop/kubocker/study
-# mkdir $HOME/Develop/kubocker/app
 
 echo 'Installing... controlling language versions'
 # pyenv
@@ -143,7 +138,8 @@ do
   if [ -e $HOME/$file ]; then
     rm -f $HOME/$file
   fi
-  ln -s $dir/dotfiles/$file $HOME/$file
+  # ln -s $dir/dotfiles/$file $HOME/$file
+  ln -s $dir/dotfiles/dotfiles/$file $HOME/$file
 done
 
 # kbk vims

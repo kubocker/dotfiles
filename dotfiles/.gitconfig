@@ -1,0 +1,45 @@
+[user]
+	name = russianroulette.3511
+	email = russianroulette.3511@gmail.com
+
+[alias]
+    co = commit
+    st = status
+    br = branch
+    ch = checkout
+    l = log --date=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn %Creset%s'
+    ll = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+    lg = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn%Cred%d %Creset%s'
+    lm = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+
+[core]
+    editor = vim
+    quotepath = false
+    pager = less -r
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[credential]
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
