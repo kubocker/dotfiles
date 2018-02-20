@@ -49,6 +49,8 @@ let g:clang2_placeholder_prev = ''
 
 " plugin manager
 let g:spacevim_plugin_manager = 'dein' "vim-plug or dein or neobundle
+let g:spacevim_filemanager = 'vimfiler' "nerdtree
+let g:spacevim_statusline_separator = 'arrow'
 
 " plugins
 let g:spacevim_custom_plugins = [
