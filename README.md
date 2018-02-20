@@ -19,9 +19,11 @@ $ source setup.sh
 - [ ] emacs settings
 - [ ] spacemacs settings
 - [x] atom, atom-ide settings -> delete
-- [ ] memolist.vim -> .vimrc fix
+- [x] memolist.vim -> .vimrc fix
 - [ ] lisp
 - [ ] clang
+- [ ] clojure
+- [x] scala
 
 #### 2018/01/23 now
-- docker + dotfiles
+- docker + dotfiles => dockerfile
