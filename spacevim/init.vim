@@ -53,10 +53,18 @@ let g:spacevim_plugin_manager = 'dein' "vim-plug or dein or neobundle
 " plugins
 let g:spacevim_custom_plugins = [
     \ ['simeji/winresizer'],
-    \ ['derekwyatt/vim-scala']
+    \ ['derekwyatt/vim-scala'],
+    \ ['glidenote/memolist.vim']
     \ ]
 
 " window size change manager
 let g:winresizer_enable = 1
 let g:winresizer_gui_enable = 1
 let g:winresizer_start_key = '<C-W>'
+
+" memolist
+let g:memolist_path = "~/Develop/kubocker/__memo__"
+let g:memolist_template_dir_path = "~/Develop/kubocker/dotfiles/templates"
+nnoremap <Leader>mn  :MemoNew<CR>
+nnoremap <Leader>ml  :MemoList<CR>
+nnoremap <Leader>mg  :MemoGrep<CR>
