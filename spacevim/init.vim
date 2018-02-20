@@ -46,6 +46,7 @@ let g:clang2_placeholder_prev = ''
 
 " colorscheme
 " let g:spacevim_colorscheme = 'jellybeans'
+let g:spacevim_colorscheme = 'space-vim-dark'
 
 " plugin manager
 let g:spacevim_plugin_manager = 'dein' "vim-plug or dein or neobundle
@@ -56,7 +57,8 @@ let g:spacevim_statusline_separator = 'arrow'
 let g:spacevim_custom_plugins = [
     \ ['simeji/winresizer'],
     \ ['derekwyatt/vim-scala'],
-    \ ['glidenote/memolist.vim']
+    \ ['glidenote/memolist.vim'],
+    \ ['liuchengxu/space-vim-dark']
     \ ]
 
 " window size change manager
