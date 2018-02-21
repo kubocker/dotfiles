@@ -45,15 +45,28 @@ let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
 
 " colorscheme
-" let g:spacevim_colorscheme = 'jellybeans'
+" ----------------------------------
+" jellybeans, space-vim-dark
+" ----------------------------------
 let g:spacevim_colorscheme = 'space-vim-dark'
 
-" plugin manager
-let g:spacevim_plugin_manager = 'dein' "vim-plug or dein or neobundle
+" plugin install manager
+" ----------------------------------
+" vim-plug, dein, neobundle
+" ----------------------------------
+let g:spacevim_plugin_manager = 'dein'
+
+" file manager
+" ----------------------------------
+" vimfiler, nerdtree
+" ----------------------------------
 let g:spacevim_filemanager = 'vimfiler' "nerdtree
 let g:spacevim_statusline_separator = 'arrow'
 
 " plugins
+" ----------------------------------
+"
+" ----------------------------------
 let g:spacevim_custom_plugins = [
     \ ['simeji/winresizer'],
     \ ['derekwyatt/vim-scala'],
@@ -61,12 +74,18 @@ let g:spacevim_custom_plugins = [
     \ ['liuchengxu/space-vim-dark']
     \ ]
 
-" window size change manager
+" settings
+" ----------------------------------
+" 1. windos size change manager
+" 2. memolist
+" ----------------------------------
+
+" 1.
 let g:winresizer_enable = 1
 let g:winresizer_gui_enable = 1
 let g:winresizer_start_key = '<C-W>'
 
-" memolist
+" 2.
 let g:memolist_path = "~/Develop/kubocker/__memo__"
 let g:memolist_template_dir_path = "~/Develop/kubocker/dotfiles/templates"
 nnoremap <Leader>mn  :MemoNew<CR>
