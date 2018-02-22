@@ -91,3 +91,9 @@ let g:memolist_template_dir_path = "~/Develop/kubocker/dotfiles/templates"
 nnoremap <Leader>mn  :MemoNew<CR>
 nnoremap <Leader>ml  :MemoList<CR>
 nnoremap <Leader>mg  :MemoGrep<CR>
+
+" settings
+" ----------------------------------
+" vims
+" ----------------------------------
+set clipboard=unnamed,autoselect
