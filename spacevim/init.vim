@@ -10,6 +10,7 @@ call SpaceVim#layers#load('lang#haskell')
 call SpaceVim#layers#load('lang#java')
 call SpaceVim#layers#load('lang#javascript')
 call SpaceVim#layers#load('lang#lua')
+call SpaceVim#layers#load('lang#nim')
 call SpaceVim#layers#load('lang#perl')
 call SpaceVim#layers#load('lang#php')
 call SpaceVim#layers#load('lang#python')
@@ -71,7 +72,8 @@ let g:spacevim_custom_plugins = [
     \ ['simeji/winresizer'],
     \ ['derekwyatt/vim-scala'],
     \ ['glidenote/memolist.vim'],
-    \ ['liuchengxu/space-vim-dark']
+    \ ['liuchengxu/space-vim-dark'],
+    \ ['zah/nim.vim']
     \ ]
 
 " settings
@@ -88,9 +90,9 @@ let g:winresizer_start_key = '<C-W>'
 " 2.
 let g:memolist_path = "~/Develop/kubocker/__memo__"
 let g:memolist_template_dir_path = "~/Develop/kubocker/dotfiles/templates"
-nnoremap <Leader>mn  :MemoNew<CR>
-nnoremap <Leader>ml  :MemoList<CR>
-nnoremap <Leader>mg  :MemoGrep<CR>
+nnoremap <Leader>mn :MemoNew<CR>
+nnoremap <Leader>ml :MemoList<CR>
+nnoremap <Leader>mg :MemoGrep<CR>
 
 " settings
 " ----------------------------------

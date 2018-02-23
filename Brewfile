@@ -25,6 +25,7 @@ brew 'redis'
 brew 'reattach-to-user-namespace'
 brew 'roswell'
 brew 'jq'
+brew 'nim'
 
 cask 'ccleaner'
 cask 'iterm2'
