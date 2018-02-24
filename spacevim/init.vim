@@ -47,9 +47,9 @@ let g:clang2_placeholder_prev = ''
 
 " colorscheme
 " ----------------------------------
-" jellybeans, space-vim-dark
+"  URL: https://github.com/rafi/awesome-vim-colorschemes
 " ----------------------------------
-let g:spacevim_colorscheme = 'space-vim-dark'
+" let g:spacevim_colorscheme = ''
 
 " plugin install manager
 " ----------------------------------
@@ -80,6 +80,7 @@ let g:spacevim_custom_plugins = [
 " ----------------------------------
 " 1. windos size change manager
 " 2. memolist
+" 3. vimfiler
 " ----------------------------------
 
 " 1.
@@ -93,6 +94,9 @@ let g:memolist_template_dir_path = "~/Develop/kubocker/dotfiles/templates"
 nnoremap <Leader>mn :MemoNew<CR>
 nnoremap <Leader>ml :MemoList<CR>
 nnoremap <Leader>mg :MemoGrep<CR>
+
+" 3.
+noremap <silent> :tree :VimFiler -split -simple -winwidth=30 -no-quit
 
 " settings
 " ----------------------------------
