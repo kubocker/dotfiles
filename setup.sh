@@ -38,6 +38,7 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew tap Homebrew/bundle
     brew tap caskroom/cask
     brew tap pivotal/tap
+    brew tap ethereum/ethereum
     brew bundle
 
     # Downloads 管理 (local)
