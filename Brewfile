@@ -26,6 +26,8 @@ brew 'reattach-to-user-namespace'
 brew 'roswell'
 brew 'jq'
 brew 'nim'
+brew 'ethereum'
+brew 'geth'
 
 cask 'ccleaner'
 cask 'iterm2'
