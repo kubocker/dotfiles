@@ -21,6 +21,11 @@ export RBENV_ROOT="$HOME/.rbenv"
 export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 
+# nodenv
+export NODENV_ROOT="$HOME/.nodenv"
+export PATH="$NODENV_ROOT/bin:$PATH"
+eval "$(nodenv init -)"
+
 # jenv
 export JENV_ROOT="$HOME/.jenv"
 export PATH="$JENV_ROOT/bin:$PATH"
@@ -38,12 +43,6 @@ eval "$(jenv init -)"
 # valet
 ## export PATH=$PATH:~/.composer/vendor/bin
 
-# nvm
-export NVM_ROOT="$HOME/.nvm"
-[ -s "$NVM_ROOT/nvm.sh" ] && . "$NVM_ROOT/nvm.sh"
-nvm use default
-npm_dir=${NVM_PATH}_modules
-export NODE_PATH=$npm_dir
 
 # swiftenv
 ## export SWIFTENV_ROOT="$HOME/.swiftenv"

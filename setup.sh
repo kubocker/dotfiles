@@ -76,7 +76,12 @@ git clone https://github.com/gcuisinier/jenv.git ~/.jenv
 ## jenv add $(/usr/libexec/java_home -v 1.8)
 
 # nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+# curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+
+# nodenv
+git clone git://github.com/nodenv/nodenv.git ~/.nodenv
+git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+
 
 # SDKMAN
 curl -s https://get.sdkman.io | bash
