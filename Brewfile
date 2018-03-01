@@ -28,6 +28,7 @@ brew 'jq'
 brew 'nim'
 brew 'ethereum'
 brew 'geth'
+brew 'openssl'
 
 cask 'ccleaner'
 cask 'iterm2'

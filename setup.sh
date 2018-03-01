@@ -95,6 +95,13 @@ sdk install scala
 sdk install spark
 sdk install leiningen
 
+
+# nim
+git clone https://github.com/nim-lang/nimble.git ~/.nimble
+cd ~/.nimble
+nim c src/nimble
+src/nimble install
+
 # stack -> haskell
 curl -sSL https://get.haskellstack.org/ | sh
 
