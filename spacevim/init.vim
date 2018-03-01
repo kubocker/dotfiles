@@ -103,3 +103,4 @@ noremap <silent> :tree :VimFiler -split -simple -winwidth=30 -no-quit
 " vims
 " ----------------------------------
 set clipboard=unnamed,autoselect
+set encoding=utf-8
