@@ -49,7 +49,7 @@ let g:clang2_placeholder_prev = ''
 " ----------------------------------
 "  URL: https://github.com/rafi/awesome-vim-colorschemes
 " ----------------------------------
-" let g:spacevim_colorscheme = ''
+let g:spacevim_colorscheme = 'iceberg'
 
 " plugin install manager
 " ----------------------------------
@@ -66,14 +66,20 @@ let g:spacevim_statusline_separator = 'arrow'
 
 " plugins
 " ----------------------------------
-"
+" colorscheme
+"   - space-vim-dark, iceberg
+" programming language
+"   - nim, scala
+" others
+"   - winresizer, memolist
 " ----------------------------------
 let g:spacevim_custom_plugins = [
     \ ['simeji/winresizer'],
     \ ['derekwyatt/vim-scala'],
     \ ['glidenote/memolist.vim'],
+    \ ['zah/nim.vim'],
     \ ['liuchengxu/space-vim-dark'],
-    \ ['zah/nim.vim']
+    \ ['cocopon/iceberg.vim']
     \ ]
 
 " settings
@@ -86,7 +92,7 @@ let g:spacevim_custom_plugins = [
 " 1.
 let g:winresizer_enable = 1
 let g:winresizer_gui_enable = 1
-let g:winresizer_start_key = '<C-W>'
+let g:winresizer_start_key = '<C-M>'
 
 " 2.
 let g:memolist_path = "~/Develop/kubocker/__memo__"
