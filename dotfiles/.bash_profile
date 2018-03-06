@@ -60,10 +60,10 @@ eval "$(jenv init -)"
 export ANDROID_HOME="/Users/kubocker/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
+export GOOGLE_APPLICATION_CREDENTIALS='/Users/kubocker/.config/gcloud/application_default_credentials.json'
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kubocker/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kubocker/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/completion.bash.inc'; fi
-
-export GOOGLE_APPLICATION_CREDENTIALS='/Users/kubocker/.config/gcloud/application_default_credentials.json'
