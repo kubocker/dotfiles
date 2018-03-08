@@ -12,10 +12,7 @@ dotfiles=(
 	.gitconfig
 	.tmux.conf
     .vimrc
-    .bowerrc
-    .gvimrc
     .fabricrc
-    .pypi
 	)
 dir=$(pwd)
 
@@ -67,16 +64,9 @@ echo 'Installing... controlling language versions'
 # pyenv
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 
-# rbenv
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-
 # jenv
 git clone https://github.com/gcuisinier/jenv.git ~/.jenv
 ## jenv add $(/usr/libexec/java_home -v 1.8)
-
-# nvm
-# curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 # nodenv
 git clone git://github.com/nodenv/nodenv.git ~/.nodenv
@@ -105,6 +95,9 @@ src/nimble install
 # stack -> haskell
 curl -sSL https://get.haskellstack.org/ | sh
 
+# rbenv
+#git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+#git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 # phpenv
 ## curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
 ## git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
