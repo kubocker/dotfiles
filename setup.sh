@@ -122,7 +122,7 @@ fi
 echo 'git completion'
 # git-completion
 if [! -e ~/.git-completion.bash ]; then
-  curl https://github.com/git/git/blob/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
 fi
 
 
