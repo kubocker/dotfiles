@@ -49,7 +49,7 @@ let g:clang2_placeholder_prev = ''
 " ----------------------------------
 "  URL: https://github.com/rafi/awesome-vim-colorschemes
 " ----------------------------------
-let g:spacevim_colorscheme = 'iceberg'
+let g:spacevim_colorscheme = 'dracula'
 
 " plugin install manager
 " ----------------------------------
@@ -67,7 +67,7 @@ let g:spacevim_statusline_separator = 'arrow'
 " plugins
 " ----------------------------------
 " colorscheme
-"   - space-vim-dark, iceberg
+"   - space-vim-dark, iceberg, dracula
 " programming language
 "   - nim, scala
 " others
@@ -79,7 +79,8 @@ let g:spacevim_custom_plugins = [
     \ ['glidenote/memolist.vim'],
     \ ['zah/nim.vim'],
     \ ['liuchengxu/space-vim-dark'],
-    \ ['cocopon/iceberg.vim']
+    \ ['cocopon/iceberg.vim'],
+    \ ['dracula/vim']
     \ ]
 
 " settings
