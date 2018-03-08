@@ -17,9 +17,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # rbenv
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
+# export RBENV_ROOT="$HOME/.rbenv"
+# export PATH="$RBENV_ROOT/bin:$PATH"
+# eval "$(rbenv init -)"
 
 # nodenv
 export NODENV_ROOT="$HOME/.nodenv"
