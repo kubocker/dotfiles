@@ -71,16 +71,16 @@ let g:spacevim_statusline_separator = 'arrow'
 " programming language
 "   - nim, scala
 " others
-"   - winresizer, memolist
+"   - winresizer, memolist, calendar.vim
 " ----------------------------------
 let g:spacevim_custom_plugins = [
     \ ['simeji/winresizer'],
     \ ['derekwyatt/vim-scala'],
-    \ ['glidenote/memolist.vim'],
     \ ['zah/nim.vim'],
     \ ['liuchengxu/space-vim-dark'],
     \ ['cocopon/iceberg.vim'],
-    \ ['dracula/vim']
+    \ ['dracula/vim'],
+    \ ['mattn/calendar-vim']
     \ ]
 
 " settings
@@ -88,6 +88,7 @@ let g:spacevim_custom_plugins = [
 " 1. windos size change manager
 " 2. memolist
 " 3. vimfiler
+" 4. calendar
 " ----------------------------------
 
 " 1.
@@ -104,6 +105,9 @@ nnoremap <Leader>mg :MemoGrep<CR>
 
 " 3.
 noremap <silent> :tree :VimFiler -split -simple -winwidth=30 -no-quit
+
+" 4.
+let g:calendar_diary=$HOME.'/Develop/kubocker/__memo__/work/diary'
 
 " settings
 " ----------------------------------
