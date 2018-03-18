@@ -6,7 +6,7 @@ echo "Installing yum packages..."
 if [ $(uname -s) != 'Darwin']; then
 
     if [ -e /etc/redhat-release ]; then
-        cat YumFile | xargs sudo yum install
+        cat Yumfile | xargs sudo yum install
     fi
 
 fi
