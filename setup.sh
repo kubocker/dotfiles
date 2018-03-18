@@ -36,6 +36,7 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew tap caskroom/cask
     brew tap pivotal/tap
     brew tap ethereum/ethereum
+    brew cask install opera
     brew bundle
 
     # Downloads 管理 (local)
