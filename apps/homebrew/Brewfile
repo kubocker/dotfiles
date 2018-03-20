@@ -1,0 +1,25 @@
+git
+vim --with-python3 --with-python --with-lua
+tig
+tmux
+reattach-to-user-namespace
+nim
+heroku
+ansible
+docker
+ag
+peco
+mas
+mercurial
+ctags
+mongodb
+redis
+roswell
+jq
+khell/homebrew-srm/srm
+brew-cask
+ethereum
+geth
+openssl
+doxygen
+graphviz
