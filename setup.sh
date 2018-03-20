@@ -12,7 +12,6 @@ dotfiles=(
 	.gitconfig
 	.tmux.conf
     .vimrc
-    .fabricrc
 	)
 dir=$(pwd)
 
