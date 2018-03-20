@@ -22,89 +22,14 @@ if [ $dir != $HOME/$kbk_dir ]; then
 	return
 fi
 
-# mac
-if [ $(uname -s) = 'Darwin' ]; then
+echo 'setup apps....'
+source $HOME/$kbk_dir."/apps/_install.sh"
 
-    # Homebrew
-    [ -z "$(which brew)" ] &&
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
-    
-    brew update
+echo 'setup config....'
+source $HOME/$kbk_dir."/config/_install.sh"
 
-    echo "Brewfile....."
-    brew tap Homebrew/bundle
-    brew tap caskroom/cask
-    brew tap pivotal/tap
-    brew tap ethereum/ethereum
-    brew bundle
-
-    # Downloads 管理 (local)
-    mkdir $HOME/Downloads/dmgs
-    mkdir $HOME/Downloads/documents
-    mkdir $HOME/Downloads/imgs
-
-# Linux
-else
-    # CentOS
-    echo "This is $(uname -s)"
-    echo "installing apps..."
-    sudo yum install -y git \
-                        vim --with-python3 --without-python --with-lua \
-                        patch httpd epel-release.noarch the_silver_searcher \
-                        tig lsof jq tmux peco \
-                        wget \
-                        gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel ctags \
-                        lua-devel ncurses-devel \
-                        ansible \
-                        heroku
-
-fi
-
-echo 'Installing... controlling language versions'
-# pyenv
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-
-# jenv
-git clone https://github.com/gcuisinier/jenv.git ~/.jenv
-## jenv add $(/usr/libexec/java_home -v 1.8)
-
-# nodenv
-git clone git://github.com/nodenv/nodenv.git ~/.nodenv
-git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
-
-
-# SDKMAN
-curl -s https://get.sdkman.io | bash
-source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
-sdk selfupdate force
-sdk install kotlin
-sdk install maven
-sdk install springboot
-sdk install sbt
-sdk install scala
-sdk install spark
-sdk install leiningen
-
-
-# nim
-git clone https://github.com/nim-lang/nimble.git ~/.nimble
-cd ~/.nimble
-nim c src/nimble
-src/nimble install
-
-# stack -> haskell
-curl -sSL https://get.haskellstack.org/ | sh
-
-# rbenv
-#git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-#git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-# phpenv
-## curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
-## git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
-# swiftenv
-## git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
-# goenv
-## git clone https://github.com/wfarr/goenv.git ~/.goenv
+echo 'setup home....'
+source $HOME/$kbk_dir."/home/_install.sh"
 
 echo 'git prompt'
 # git-prompt
