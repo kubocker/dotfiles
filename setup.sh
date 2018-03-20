@@ -25,10 +25,10 @@ echo 'setup apps....'
 source $HOME/$kbk_dir."/apps/_install.sh"
 
 echo 'setup config....'
-source $HOME/$kbk_dir."/config/_install.sh"
+source $HOME/$kbk_dir."/config/_setup.sh"
 
 echo 'setup home....'
-source $HOME/$kbk_dir."/home/_install.sh"
+source $HOME/$kbk_dir."/home/_setup.sh"
 
 echo 'git prompt'
 # git-prompt
