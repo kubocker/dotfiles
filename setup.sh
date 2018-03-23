@@ -7,12 +7,12 @@ kbk_dir=Develop/kubocker/dotfiles
 echo "Start setting of dotfiles..."
 
 dotfiles=(
-	.bashrc
-	.bash_profile
-	.gitconfig
-	.tmux.conf
-    .vimrc
-	)
+  .bashrc
+  .bash_profile
+  .gitconfig
+  .tmux.conf
+  .vimrc
+  )
 dir=$(pwd)
 
 if [ $dir != $HOME/$kbk_dir ]; then
