@@ -5,3 +5,5 @@ vue
 vue-cli
 yarn
 typescript
+yo
+generator-express-ts

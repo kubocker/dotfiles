@@ -21,14 +21,37 @@ if [ $dir != $HOME/$kbk_dir ]; then
 	return
 fi
 
-echo 'setup apps....'
+
+echo 'setup packages....'
 source $HOME/$kbk_dir."/apps/_install.sh"
 
-echo 'setup config....'
-source $HOME/$kbk_dir."/config/_setup.sh"
+# pyenv
+if [ ! -e ~/.pyenv ]; then
+  git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+fi
 
-echo 'setup home....'
-source $HOME/$kbk_dir."/home/_setup.sh"
+# jenv
+if [ ! -e ~/.jenv ]; then
+  git clone https://github.com/gcuisinier/jenv.git ~/.jenv
+  ## jenv add $(/usr/libexec/java_home -v 1.8)
+fi
+
+# nodenv
+if [ ! -e ~/.nodenv ]; then
+  git clone git://github.com/nodenv/nodenv.git ~/.nodenv
+  git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+fi
+
+# SDKMAN
+if [ ! -e ~/.sdkman ]; then
+  curl -s https://get.sdkman.io | bash
+  source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
+fi
+
+# nim
+if [ ! -e ~/.nimble ]; then
+  git clone https://github.com/nim-lang/nimble.git ~/.nimble
+fi
 
 echo 'git prompt'
 # git-prompt
@@ -39,9 +62,8 @@ fi
 echo 'git completion'
 # git-completion
 if [! -e ~/.git-completion.bash ]; then
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
 fi
-
 
 echo 'Checking...'
 if [ -e $HOME/.vim ]; then
@@ -56,9 +78,8 @@ echo "make... symbolink"
 for file in ${dotfiles[@]}
 do
   if [ -e $HOME/$file ]; then
-    rm -f $HOME/$file
+    rm -rf $HOME/$file
   fi
-  # ln -s $dir/dotfiles/$file $HOME/$file
   ln -s $dir/dotfiles/dotfiles/$file $HOME/$file
 done
 
@@ -72,6 +93,14 @@ source ~/.bash_profile
 source ~/.bashrc
 #exec $SHELL -l # 再読み込み
 
+echo 'setup packages....'
+source $HOME/$kbk_dir."/packages/_install.sh"
+
+echo 'setup config....'
+source $HOME/$kbk_dir."/config/_setup.sh"
+
+echo 'setup home....'
+source $HOME/$kbk_dir."/home/_setup.sh"
 
 echo "setting tmux"
 tmux source-file ~/.tmux.conf

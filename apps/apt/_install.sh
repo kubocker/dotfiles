@@ -7,7 +7,7 @@ echo "installing... apt-get packages"
 if [ $(uname -s) != 'Darwin' ]; then
 
     if [ -e /etc/debian_version ] || [ -e /etc/debian_release ];
-        cat Aptfile | xargs sudo apt-get install
+        cat Aptfile | xargs sudo apt -y install
     fi
 
 fi
