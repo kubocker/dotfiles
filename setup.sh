@@ -77,15 +77,16 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 echo "make... symbolink"
 for file in ${dotfiles[@]}
 do
-  if [ -e $HOME/$file ]; then
-    rm -rf $HOME/$file
-  fi
-  ln -s $dir/dotfiles/dotfiles/$file $HOME/$file
+  rm -rf $HOME/$file
+  # if [ -e $HOME/$file ]; then
+  #  rm -rf $HOME/$file
+  # fi
+  ln -s $HOME/$kbk_dir/dotfiles/$file $HOME/$file
 done
 
 # vim-plug
 echo "Installing Vim Plugin"
-vim +PlugInstall +qall
+# vim +PlugInstall +qall
 
 # source
 echo "source ~/.bash_profile and ~/.bashrc"
@@ -94,13 +95,13 @@ source ~/.bashrc
 #exec $SHELL -l # 再読み込み
 
 echo 'setup packages....'
-source $HOME/$kbk_dir."/packages/_install.sh"
+source $HOME/$kbk_dir/packages/_install.sh
 
 echo 'setup config....'
-source $HOME/$kbk_dir."/config/_setup.sh"
+source $HOME/$kbk_dir/config/_setup.sh
 
 echo 'setup home....'
-source $HOME/$kbk_dir."/home/_setup.sh"
+source $HOME/$kbk_dir/home/_setup.sh
 
 echo "setting tmux"
 tmux source-file ~/.tmux.conf
