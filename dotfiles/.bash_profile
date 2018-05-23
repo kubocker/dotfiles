@@ -71,3 +71,5 @@ if [ -f '/Users/kubocker/google-cloud-sdk/path.bash.inc' ]; then source '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kubocker/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/completion.bash.inc'; fi
+export ANDROID_HOME=/usr/local/share/android-sdk
+export JAVA_HOME=/Library/Java/Home

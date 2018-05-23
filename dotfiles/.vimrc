@@ -23,6 +23,7 @@ Plug 'vim-scripts/ibmedit.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'rhysd/vim-color-spring-night'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " airline "
 Plug 'vim-airline/vim-airline'
@@ -181,7 +182,7 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme iceberg
     "colorscheme nordisk
     "colorscheme zazen
-    colorscheme neodark
+    "colorscheme neodark
     "colorscheme seattle
     "colorscheme petrel
     "colorschem seagull
@@ -190,6 +191,7 @@ if isdirectory(expand("~/.vim/plugged"))
     "colorscheme spring-night
     "colorscheme tender
     "colorscheme darkblue
+    colorscheme dracula
 
 endif
 
