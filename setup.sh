@@ -88,6 +88,10 @@ done
 echo "Installing Vim Plugin"
 # vim +PlugInstall +qall
 
+# SpaceVim
+echo "Installing SpaceVim..."
+curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
+
 # source
 echo "source ~/.bash_profile and ~/.bashrc"
 source ~/.bash_profile
