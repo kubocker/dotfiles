@@ -42,6 +42,11 @@ if [ ! -e ~/.nodenv ]; then
   git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
 fi
 
+# goenv
+if [ ! -e ~/.goenv ]; then
+  git clone https://github.com/syndbg/goenv.git ~/.goenv
+fi
+
 # SDKMAN
 if [ ! -e ~/.sdkman ]; then
   curl -s https://get.sdkman.io | bash
