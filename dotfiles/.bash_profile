@@ -31,6 +31,11 @@ export JENV_ROOT="$HOME/.jenv"
 export PATH="$JENV_ROOT/bin:$PATH"
 eval "$(jenv init -)"
 
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH=$GOENV_ROOT/bin:$PATH
+eval "$(goenv init -)"
+
 # rbenv
 # export RBENV_ROOT="$HOME/.rbenv"
 # export PATH="$RBENV_ROOT/bin:$PATH"
@@ -53,9 +58,6 @@ eval "$(jenv init -)"
 ## export PATH="$SWIFTENV_ROOT/bin:$PATH"
 ## eval "$(swiftenv init -)"; 
 
-# goenv
-## export PATH="$HOME/.goenv/bin:$PATH"
-## eval "$(goenv init -)"
 
 # ansible
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
