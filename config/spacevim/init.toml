@@ -38,3 +38,7 @@ default_height = 30
 
 [[layers]]
 name = "colorscheme"
+
+# languages
+[[layers]]
+  name = "lang#go"
