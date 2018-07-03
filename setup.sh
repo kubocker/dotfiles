@@ -10,6 +10,7 @@ dotfiles=(
   .bashrc
   .bash_profile
   .gitconfig
+  .gitignore_global
   .tmux.conf
   .vimrc
   )
@@ -23,7 +24,7 @@ fi
 
 
 echo 'setup packages....'
-source $HOME/$kbk_dir."/apps/_install.sh"
+source $HOME/$kbk_dir/apps/_install.sh
 
 # pyenv
 if [ ! -e ~/.pyenv ]; then
@@ -67,7 +68,8 @@ fi
 echo 'git completion'
 # git-completion
 if [! -e ~/.git-completion.bash ]; then
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
+  # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
+  wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
 fi
 
 echo 'Checking...'
