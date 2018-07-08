@@ -40,29 +40,29 @@ default_height = 30
 name = "colorscheme"
 
 # custom plugins {{{
-[[custom_plugins]]
-  name = 'glidenote/memolist.vim'
+# [[custom_plugins]]
+# name = 'glidenote/memolist'
 # }}}
 
 # languages {{{
 [[layers]]
-  name = "lang#python"
+name = "lang#python"
 
 [[layers]]
-  name = "lang#go"
+name = "lang#go"
 
 [[layers]]
-  name = "lang#typescript"
+name = "lang#typescript"
 
 [[layers]]
-  name = "lang#c"
+name = "lang#c"
 
 [[layers]]
-  name = "lang#javascript"
+name = "lang#javascript"
 
 [[layers]]
-  name = "lang#lisp"
+name = "lang#lisp"
 
 [[layers]]
-  name = "lang#vim"
+name = "lang#vim"
 # }}}
