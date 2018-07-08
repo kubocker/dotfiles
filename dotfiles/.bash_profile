@@ -36,10 +36,16 @@ export GOENV_ROOT="$HOME/.goenv"
 export PATH=$GOENV_ROOT/bin:$PATH
 eval "$(goenv init -)"
 
+export GOROOT="${HOME}/.goenv/${GOVERSION}/1.10.3"
+export GOPATH=${HOME}
+export PATH=${GOROOT}/bin:${GOPATH}/.go/bin:${PATH}
+
+# eval "$(direnv hook bash)"
+
 # rbenv
-# export RBENV_ROOT="$HOME/.rbenv"
-# export PATH="$RBENV_ROOT/bin:$PATH"
-# eval "$(rbenv init -)"
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="$RBENV_ROOT/bin:$PATH"
+eval "$(rbenv init -)"
 
 # phpenv
 ## export PHPENV_ROOT="$HOME/.phpenv"
