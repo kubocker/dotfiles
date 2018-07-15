@@ -1,0 +1,37 @@
+# Mac
+*.DS_Store
+
+# WebStorm
+.idea/
+
+# npm
+npm-debug.log
+
+# yarn
+yarn-error.log
+
+# VIM
+*.un~
+Session.vim
+.netrwhist
+*~
+*.swp
+.lvimrc
+
+# VS Code
+typings/
+.vscode
+
+# PayPal project specific stuff
+.nvmrc
+.agignore
+
+# Over-arching stuff
+*.ignored/
+*.ignored.*
+
+# git
+*.patch
+
+# eslint
+.eslintcache

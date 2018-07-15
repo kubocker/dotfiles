@@ -42,4 +42,7 @@
 
 [credential]
 	helper = !aws codecommit credential-helper $@
-	UseHttpPath = true
+  UseHttpPath = true
+
+[core]
+  excludesfile = /Users/kubocker/.gitignore_global
