@@ -54,6 +54,11 @@ if [ ! -e ~/.sdkman ]; then
   source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
 fi
 
+# rust
+if [ ! -e ~/.cargo ]; then
+  curl https://sh.rustup.rs -sSf | sh
+fi
+
 # nim
 if [ ! -e ~/.nimble ]; then
   git clone https://github.com/nim-lang/nimble.git ~/.nimble

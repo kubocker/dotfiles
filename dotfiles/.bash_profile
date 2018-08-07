@@ -64,6 +64,9 @@ eval "$(rbenv init -)"
 ## export PATH="$SWIFTENV_ROOT/bin:$PATH"
 ## eval "$(swiftenv init -)"; 
 
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 
 # ansible
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"

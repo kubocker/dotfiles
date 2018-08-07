@@ -65,4 +65,7 @@ name = "lang#lisp"
 
 [[layers]]
 name = "lang#vim"
+
+[[layers]]
+name = "lang#rust"
 # }}}
