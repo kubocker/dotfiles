@@ -1,5 +1,6 @@
 git
 vim --with-python3 --with-python --with-lua
+llvm --with-clang
 tig
 tmux
 reattach-to-user-namespace

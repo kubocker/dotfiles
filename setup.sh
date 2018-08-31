@@ -64,6 +64,12 @@ if [ ! -e ~/.nimble ]; then
   git clone https://github.com/nim-lang/nimble.git ~/.nimble
 fi
 
+# emscripten
+if [ ! -e ~/emsdk ]; then
+  git clone https://github.com/juj/emsdk.git
+  # git clone git://github.com/kripken/emscripten.git ~/.emscripten
+fi
+
 echo 'git prompt'
 # git-prompt
 if [ ! -e ~/.git-prompt.sh ]; then
