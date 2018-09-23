@@ -66,21 +66,3 @@ eval "$(rbenv init -)"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
-
-
-# ansible
-#export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# Android-Studio
-export ANDROID_HOME="/Users/kubocker/Library/Android/sdk"
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
-export GOOGLE_APPLICATION_CREDENTIALS='/Users/kubocker/.config/gcloud/application_default_credentials.json'
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kubocker/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kubocker/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/kubocker/google-cloud-sdk/completion.bash.inc'; fi
-export ANDROID_HOME=/usr/local/share/android-sdk
-export JAVA_HOME=/Library/Java/Home
