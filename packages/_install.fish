@@ -1,10 +1,10 @@
 #!/bin/bash
 
-function sub_install {
+function sub_install
   cd $1
-  bash _install.sh
+  source _update.fish
   cd ..
-}
+end
 
 sub_install pip/
 sub_install npm/
