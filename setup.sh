@@ -123,7 +123,7 @@ source ~/.bashrc
 #exec $SHELL -l # 再読み込み
 
 echo 'setup packages....'
-source $HOME/$kbk_dir/packages/_install.sh
+source $HOME/$kbk_dir/packages/_setup.fish
 
 echo 'setup config....'
 source $HOME/$kbk_dir/config/_setup.sh
