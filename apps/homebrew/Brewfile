@@ -7,7 +7,7 @@ reattach-to-user-namespace
 nim
 heroku
 ansible
-docker
+docker-compose
 ag
 peco
 mas

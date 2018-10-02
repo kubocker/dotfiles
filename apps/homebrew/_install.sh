@@ -11,6 +11,7 @@ if [ $(uname -s) = 'Darwin' ]; then
   brew tap Homebrew/bundle
   brew tap caskroom/cask
   brew tap pivotal/tap
+  brew tap prisma/prisma
   brew tap ethereum/ethereum
   brew tap boo/cask-upgrade
   brew tap homebrew/services
