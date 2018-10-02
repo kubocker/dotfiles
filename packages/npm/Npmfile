@@ -1,3 +1,7 @@
 oclif
 typeorm
 @vue/cli
+@adonisjs/cli
+mysql
+mongodb
+redis
