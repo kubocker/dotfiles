@@ -38,10 +38,10 @@ if [ ! -e ~/.rbenv ]; then
 fi
 
 # jenv
-if [ ! -e ~/.jenv ]; then
-  git clone https://github.com/gcuisinier/jenv.git ~/.jenv
-  ## jenv add $(/usr/libexec/java_home -v 1.8)
-fi
+# if [ ! -e ~/.jenv ]; then
+#   git clone https://github.com/gcuisinier/jenv.git ~/.jenv
+#   ## jenv add $(/usr/libexec/java_home -v 1.8)
+# fi
 
 # nodenv
 if [ ! -e ~/.nodenv ]; then

@@ -9,7 +9,6 @@ fi
 source $HOME/.git-completion.bash
 source $HOME/.git-prompt.sh
 
-
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
