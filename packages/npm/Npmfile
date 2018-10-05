@@ -2,6 +2,8 @@
 strapi@alpha
 express-generator
 sequelize
+firebase-tools
+heroku
 typescript
 oclif
 mysql2
