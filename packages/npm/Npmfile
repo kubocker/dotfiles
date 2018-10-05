@@ -10,3 +10,5 @@ oclif
 mysql2
 mongodb
 redis
+tig
+
