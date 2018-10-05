@@ -4,10 +4,7 @@ llvm --with-clang
 tig
 tmux
 reattach-to-user-namespace
-nim
-heroku
 ansible
-docker-compose
 ag
 peco
 mas

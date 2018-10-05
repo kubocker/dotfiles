@@ -22,9 +22,19 @@ if [ $dir != $HOME/$kbk_dir ]; then
 	return
 fi
 
+# nix package manager
+curl https://nixos.org/nix/install | sh
+
 
 echo 'setup packages....'
 source $HOME/$kbk_dir/apps/_install.sh
+
+
+# anyenv
+if [ ! -e ~/.anyenv ]; then
+  git clone https://github.com/riywo/anyenv ~/.anyenv
+  git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+fi
 
 # pyenv
 if [ ! -e ~/.pyenv ]; then

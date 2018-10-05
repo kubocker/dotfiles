@@ -15,6 +15,11 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 #export PATH="/usr/local/bin:$PATH"
 
+# anyenv
+export ANYENV_ROOT="$HOME/.anyenv"
+export PATH="$ANYENV_ROOT/bin:$PATH"
+eval "$(anyenv init -)"
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
