@@ -3,6 +3,7 @@ strapi@alpha
 express-generator
 sequelize
 firebase-tools
+google-cloud
 heroku
 typescript
 oclif
