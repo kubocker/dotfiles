@@ -11,6 +11,5 @@ mysql2
 mongodb
 redis
 tig
-haskell
 elm
 docker
