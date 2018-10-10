@@ -31,10 +31,10 @@ source $HOME/$kbk_dir/apps/_install.sh
 
 
 # anyenv
-if [ ! -e ~/.anyenv ]; then
-  git clone https://github.com/riywo/anyenv ~/.anyenv
-  git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
-fi
+# if [ ! -e ~/.anyenv ]; then
+#   git clone https://github.com/riywo/anyenv ~/.anyenv
+#   git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+# fi
 
 # pyenv
 if [ ! -e ~/.pyenv ]; then
@@ -46,12 +46,6 @@ if [ ! -e ~/.rbenv ]; then
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
-
-# jenv
-# if [ ! -e ~/.jenv ]; then
-#   git clone https://github.com/gcuisinier/jenv.git ~/.jenv
-#   ## jenv add $(/usr/libexec/java_home -v 1.8)
-# fi
 
 # nodenv
 if [ ! -e ~/.nodenv ]; then
@@ -76,6 +70,11 @@ fi
 # rust
 if [ ! -e ~/.cargo ]; then
   curl https://sh.rustup.rs -sSf | sh
+fi
+
+# haskell
+if [ ! -e ~/.stack ]; then
+  curl -sSL https://get.haskellstack.org/ | sh
 fi
 
 # nim
