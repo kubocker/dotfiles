@@ -1,4 +1,5 @@
 @vue/cli
+hexo-cli
 strapi@alpha
 express-generator
 sequelize
