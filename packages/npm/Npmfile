@@ -1,6 +1,7 @@
 @vue/cli
 hexo-cli
 strapi@alpha
+strongloop
 express-generator
 sequelize
 firebase-tools
