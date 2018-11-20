@@ -3,6 +3,7 @@ hexo-cli
 strapi@alpha
 strongloop
 express-generator
+nativescript
 sequelize
 firebase-tools
 google-cloud
