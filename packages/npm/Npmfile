@@ -1,5 +1,6 @@
 @vue/cli
 hexo-cli
+contentful-cli
 strapi@alpha
 strongloop
 express-generator
