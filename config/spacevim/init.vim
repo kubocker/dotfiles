@@ -55,7 +55,7 @@ let g:spacevim_colorscheme = 'dracula'
 " ----------------------------------
 " vim-plug, dein, neobundle
 " ----------------------------------
-let g:spacevim_plugin_manager = 'dein'
+let g:spacevim_plugin_manager = 'vim-plug'
 
 " file manager
 " ----------------------------------
