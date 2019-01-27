@@ -60,6 +60,9 @@ fi
 if [ ! -e ~/.goenv ]; then
   git clone https://github.com/syndbg/goenv.git ~/.goenv
 fi
+## dep
+curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+
 
 # SDKMAN
 if [ ! -e ~/.sdkman ]; then

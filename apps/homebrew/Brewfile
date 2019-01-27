@@ -23,3 +23,4 @@ doxygen
 graphviz
 wget
 jq
+dep
