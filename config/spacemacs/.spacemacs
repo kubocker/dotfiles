@@ -42,6 +42,11 @@
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
+     go
+     (go :variables
+         go-use-gometalinter t
+         go-tab-with 4
+         gofmt-command "goimports")
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
