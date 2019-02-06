@@ -4,3 +4,4 @@ golang.org/x/tools/cmd/guru
 golang.org/x/tools/cmd/gorename
 golang.org/x/tools/cmd/goimports
 github.com/alecthomas/gometalinter
+github.com/spf13/cobra/cobra
