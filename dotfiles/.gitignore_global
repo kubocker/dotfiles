@@ -35,3 +35,6 @@ typings/
 
 # eslint
 .eslintcache
+
+# spacemacs
+custom.el
