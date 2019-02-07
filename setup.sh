@@ -36,6 +36,9 @@ source $HOME/$kbk_dir/apps/_install.sh
 #   git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
 # fi
 
+# direnv
+
+
 # pyenv
 if [ ! -e ~/.pyenv ]; then
   git clone https://github.com/yyuu/pyenv.git ~/.pyenv
@@ -128,8 +131,8 @@ echo "Installing Vim Plugin"
 # vim +PlugInstall +qall
 
 # SpaceVim
-echo "Installing SpaceVim..."
-curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
+# echo "Installing SpaceVim..."
+# curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
 
 # source
 echo "source ~/.bash_profile and ~/.bashrc"

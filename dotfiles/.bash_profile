@@ -20,6 +20,9 @@ export PATH
 # export PATH="$ANYENV_ROOT/bin:$PATH"
 # eval "$(anyenv init -)"
 
+# direnv
+eval "$(direnv hook bash)"
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -39,8 +42,6 @@ eval "$(jenv init -)"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH=$GOENV_ROOT/bin:$PATH
 eval "$(goenv init -)"
-
-# eval "$(direnv hook bash)"
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
