@@ -16,9 +16,9 @@ export PATH
 #export PATH="/usr/local/bin:$PATH"
 
 # anyenv
-export ANYENV_ROOT="$HOME/.anyenv"
-export PATH="$ANYENV_ROOT/bin:$PATH"
-eval "$(anyenv init -)"
+# export ANYENV_ROOT="$HOME/.anyenv"
+# export PATH="$ANYENV_ROOT/bin:$PATH"
+# eval "$(anyenv init -)"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -40,10 +40,6 @@ export GOENV_ROOT="$HOME/.goenv"
 export PATH=$GOENV_ROOT/bin:$PATH
 eval "$(goenv init -)"
 
-export GOROOT="${HOME}/.goenv/${GOVERSION}/1.10.3"
-export GOPATH=${HOME}
-export PATH=${GOROOT}/bin:${GOPATH}/.go/bin:${PATH}
-
 # eval "$(direnv hook bash)"
 
 # rbenv
@@ -62,11 +58,6 @@ eval "$(rbenv init -)"
 ## export PATH=~/.composer/vendor/bin:$PATH
 # valet
 ## export PATH=$PATH:~/.composer/vendor/bin
-
-# swiftenv
-## export SWIFTENV_ROOT="$HOME/.swiftenv"
-## export PATH="$SWIFTENV_ROOT/bin:$PATH"
-## eval "$(swiftenv init -)"; 
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
