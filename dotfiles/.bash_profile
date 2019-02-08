@@ -34,9 +34,9 @@ export PATH="$NODENV_ROOT/bin:$PATH"
 eval "$(nodenv init -)"
 
 # jenv
-export JENV_ROOT="$HOME/.jenv"
-export PATH="$JENV_ROOT/bin:$PATH"
-eval "$(jenv init -)"
+# export JENV_ROOT="$HOME/.jenv"
+# export PATH="$JENV_ROOT/bin:$PATH"
+# eval "$(jenv init -)"
 
 # goenv
 export GOENV_ROOT="$HOME/.goenv"
