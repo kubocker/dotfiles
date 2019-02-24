@@ -49,9 +49,9 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 
 # phpenv
-## export PHPENV_ROOT="$HOME/.phpenv"
-## export PATH="$PHPENV_ROOT/bin:$PATH"
-## eval "$(phpenv init -)"
+export PHPENV_ROOT="$HOME/.phpenv"
+export PATH="$PHPENV_ROOT/bin:$PATH"
+eval "$(phpenv init -)"
 
 # pear
 ## export PATH="$HOME/pear/bin:$PATH"
