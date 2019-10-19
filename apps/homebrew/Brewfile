@@ -24,3 +24,12 @@ graphviz
 wget
 jq
 dep
+gcc
+re2c
+libmcrypt
+autoconf
+automake
+libiconv
+pcre
+php55-phalcon
+php56-phalcon

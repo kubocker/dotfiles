@@ -59,6 +59,15 @@ if [ ! -e ~/.nodenv ]; then
   ### nodenv update-version-defs
 fi
 
+# phpenv
+if [ ! -e ~/.phpenv ]; then
+  curl -L https://raw.github.com/CHH/phpenv/master/bin/phpenv-install.sh | bash
+
+  git clone git://github.com/CHH/php-build.git ~/.phpenv/plugins/php-build
+  # git clone https://github.com/ngyuki/phpenv-composer.git ~/.phpenv/plugins/phpenv-composer
+  curl -s getcomposer.org/installer | php -d detect_unicode=Off
+fi
+
 # goenv
 if [ ! -e ~/.goenv ]; then
   git clone https://github.com/syndbg/goenv.git ~/.goenv
