@@ -39,6 +39,7 @@ eval "$(nodenv init -)"
 # eval "$(jenv init -)"
 
 # goenv
+export GOPATH=$HOME/.go
 export GOENV_ROOT="$HOME/.goenv"
 export PATH=$GOENV_ROOT/bin:$PATH
 eval "$(goenv init -)"
@@ -62,3 +63,11 @@ eval "$(phpenv init -)"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+export PTOOLSPATH=/Users/kubocker/.phalcon-devtools/
+export PATH=$PATH:/Users/kubocker/.phalcon-devtools
+
+# Android SDK のパス
+export ANDROID_HOME=/Users/kubocker/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Users/kubocker/Library/Android/sdk
+export ANDROID_AVD_HOME=/Users/kubocker/.android/avd
+export PATH=$ANDROID_SDK_ROOT/build-tools/26.0.2:$PATH

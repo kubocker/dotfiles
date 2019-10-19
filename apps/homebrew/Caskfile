@@ -1,9 +1,11 @@
 iterm2
 docker
 kitematic
+minikube
 ccleaner
 vagrant
 virtualbox
 spectacle
 filezilla
 alacritty
+ngrok
