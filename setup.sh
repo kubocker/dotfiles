@@ -75,6 +75,11 @@ fi
 ## dep
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
+# flutter
+if [ ! -e ~/.flutter ]; then
+  git clone https://github.com/flutter/flutter.git ~/.flutter
+fi
+
 
 # SDKMAN
 if [ ! -e ~/.sdkman ]; then
