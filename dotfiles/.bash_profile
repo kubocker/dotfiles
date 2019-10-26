@@ -62,9 +62,13 @@ eval "$(phpenv init -)"
 ## export PATH=$PATH:~/.composer/vendor/bin
 
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
-export PTOOLSPATH=/Users/kubocker/.phalcon-devtools/
-export PATH=$PATH:/Users/kubocker/.phalcon-devtools
+## export PATH="$HOME/.cargo/bin:$PATH"
+## export PTOOLSPATH=/Users/kubocker/.phalcon-devtools/
+## export PATH=$PATH:/Users/kubocker/.phalcon-devtools
+
+# flutter
+export FLUTTER_ROOT="$HOME/.flutter"
+export PATH="$FLUTTER_ROOT/bin:$PATH"
 
 # Android SDK のパス
 export ANDROID_HOME=/Users/kubocker/Library/Android/sdk
