@@ -77,7 +77,7 @@ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 # flutter
 if [ ! -e ~/.flutter ]; then
-  git clone https://github.com/flutter/flutter.git ~/.flutter
+  git clone https://github.com/flutter/flutter.git ~/flutter
 fi
 
 

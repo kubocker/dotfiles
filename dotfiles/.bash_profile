@@ -67,7 +67,7 @@ eval "$(phpenv init -)"
 ## export PATH=$PATH:/Users/kubocker/.phalcon-devtools
 
 # flutter
-export FLUTTER_ROOT="$HOME/.flutter"
+export FLUTTER_ROOT="$HOME/flutter"
 export PATH="$FLUTTER_ROOT/bin:$PATH"
 
 # Android SDK のパス
