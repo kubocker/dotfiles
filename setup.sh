@@ -98,9 +98,9 @@ if [ ! -e ~/.stack ]; then
 fi
 
 # nim
-if [ ! -e ~/.nimble ]; then
-  git clone https://github.com/nim-lang/nimble.git ~/.nimble
-fi
+# if [ ! -e ~/.nimble ]; then
+#   git clone https://github.com/nim-lang/nimble.git ~/.nimble
+# fi
 
 # emscripten
 if [ ! -e ~/emsdk ]; then
@@ -142,7 +142,7 @@ done
 
 # vim-plug
 echo "Installing Vim Plugin"
-# vim +PlugInstall +qall
+vim +PlugInstall +qall
 
 # SpaceVim
 # echo "Installing SpaceVim..."
