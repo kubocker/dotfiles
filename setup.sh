@@ -22,9 +22,6 @@ if [ $dir != $HOME/$kbk_dir ]; then
 	return
 fi
 
-# nix package manager
-curl https://nixos.org/nix/install | sh
-
 
 echo 'setup packages....'
 source $HOME/$kbk_dir/apps/_install.sh
@@ -93,9 +90,9 @@ if [ ! -e ~/.cargo ]; then
 fi
 
 # haskell
-if [ ! -e ~/.stack ]; then
-  curl -sSL https://get.haskellstack.org/ | sh
-fi
+#if [ ! -e ~/.stack ]; then
+#  curl -sSL https://get.haskellstack.org/ | sh
+#fi
 
 # nim
 # if [ ! -e ~/.nimble ]; then
@@ -116,7 +113,7 @@ fi
 
 echo 'git completion'
 # git-completion
-if [! -e ~/.git-completion.bash ]; then
+if [ ! -e ~/.git-completion.bash ]; then
   # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
   wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
 fi
@@ -150,8 +147,8 @@ vim +PlugInstall +qall
 
 # source
 echo "source ~/.bash_profile and ~/.bashrc"
-source ~/.bash_profile
-source ~/.bashrc
+# source ~/.bash_profile
+# source ~/.bashrc
 #exec $SHELL -l # 再読み込み
 
 echo 'setup packages....'
