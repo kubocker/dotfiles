@@ -27,14 +27,6 @@ echo 'setup packages....'
 source $HOME/$kbk_dir/apps/_install.sh
 
 
-# anyenv
-# if [ ! -e ~/.anyenv ]; then
-#   git clone https://github.com/riywo/anyenv ~/.anyenv
-#   git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
-# fi
-
-# direnv
-
 
 # pyenv
 if [ ! -e ~/.pyenv ]; then
@@ -105,6 +97,10 @@ if [ ! -e ~/emsdk ]; then
   # git clone git://github.com/kripken/emscripten.git ~/.emscripten
 fi
 
+echo 'firebase tools'
+curl -sL firebase.tools | bash
+
+
 echo 'git prompt'
 # git-prompt
 if [ ! -e ~/.git-prompt.sh ]; then
@@ -114,8 +110,7 @@ fi
 echo 'git completion'
 # git-completion
 if [ ! -e ~/.git-completion.bash ]; then
-  # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
-  wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
 fi
 
 echo 'Checking...'
@@ -126,6 +121,7 @@ fi
 
 echo "Installing vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 
 echo "make... symbolink"
 for file in ${dotfiles[@]}
@@ -162,5 +158,6 @@ source $HOME/$kbk_dir/home/_setup.sh
 
 echo "setting tmux"
 tmux source-file ~/.tmux.conf
+
 
 echo "End setting of dotfiles"
