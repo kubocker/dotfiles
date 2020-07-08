@@ -16,6 +16,7 @@ if [ $(uname -s) = 'Darwin' ]; then
   brew tap boo/cask-upgrade
   brew tap homebrew/services
   brew tap tigerstrikemedia/homebrew-phalconphp
+  brew tap staticfloat/julia
 
   # brew bundle
 
