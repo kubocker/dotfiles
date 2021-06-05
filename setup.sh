@@ -69,7 +69,6 @@ if [ ! -e ~/.flutter ]; then
   git clone https://github.com/flutter/flutter.git ~/flutter
 fi
 
-
 # SDKMAN
 if [ ! -e ~/.sdkman ]; then
   curl -s https://get.sdkman.io | bash
@@ -79,6 +78,11 @@ fi
 # rust
 if [ ! -e ~/.cargo ]; then
   curl https://sh.rustup.rs -sSf | sh
+fi
+
+# deno
+if [ ! -e ~..deno ]; then
+  curl -fsSL https://deno.land/x/install/install.sh | sh
 fi
 
 # haskell
