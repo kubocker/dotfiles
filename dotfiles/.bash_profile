@@ -26,7 +26,10 @@ eval "$(direnv hook bash)"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+fi
 
 # nodenv
 export NODENV_ROOT="$HOME/.nodenv"
@@ -50,9 +53,9 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 
 # phpenv
-export PHPENV_ROOT="$HOME/.phpenv"
-export PATH="$PHPENV_ROOT/bin:$PATH"
-eval "$(phpenv init -)"
+# export PHPENV_ROOT="$HOME/.phpenv"
+# export PATH="$PHPENV_ROOT/bin:$PATH"
+# eval "$(phpenv init -)"
 
 # pear
 ## export PATH="$HOME/pear/bin:$PATH"
@@ -62,16 +65,22 @@ eval "$(phpenv init -)"
 ## export PATH=$PATH:~/.composer/vendor/bin
 
 # rust
-## export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 ## export PTOOLSPATH=/Users/kubocker/.phalcon-devtools/
 ## export PATH=$PATH:/Users/kubocker/.phalcon-devtools
 
 # flutter
 export FLUTTER_ROOT="$HOME/flutter"
 export PATH="$FLUTTER_ROOT/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # Android SDK のパス
 export ANDROID_HOME=/Users/kubocker/Library/Android/sdk
 export ANDROID_SDK_ROOT=/Users/kubocker/Library/Android/sdk
 export ANDROID_AVD_HOME=/Users/kubocker/.android/avd
-export PATH=$ANDROID_SDK_ROOT/build-tools/26.0.2:$PATH
+export PATH=$ANDROID_SDK_ROOT/build-tools/29.0.2:$PATH
+export PATH=$PATH:~/Library/Android/sdk/build-tools/26.0.2/
+export PATH=$PATH:~/Library/Android/sdk/build-tools/28.0.3/
+export PATH=$PATH:~/Library/Android/sdk/build-tools/29.0.2/
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -54,7 +54,7 @@ Plug 'tell-k/vim-autopep8'
 " Plug 'tpope/vim-rails'
 
 " - go
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 " - java
 " Plug 'rudes/vim-java'

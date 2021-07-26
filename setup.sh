@@ -13,6 +13,7 @@ dotfiles=(
   .gitignore_global
   .tmux.conf
   .vimrc
+  .hyper.js
   )
 dir=$(pwd)
 
@@ -91,9 +92,9 @@ fi
 #fi
 
 # nim
-# if [ ! -e ~/.nimble ]; then
-#   git clone https://github.com/nim-lang/nimble.git ~/.nimble
-# fi
+if [ ! -e ~/.nimble ]; then
+  git clone https://github.com/nim-lang/nimble.git ~/.nimble
+fi
 
 # emscripten
 if [ ! -e ~/emsdk ]; then
