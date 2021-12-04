@@ -65,9 +65,11 @@ eval "$(rbenv init -)"
 ## export PATH=$PATH:~/.composer/vendor/bin
 
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
 ## export PTOOLSPATH=/Users/kubocker/.phalcon-devtools/
 ## export PATH=$PATH:/Users/kubocker/.phalcon-devtools
+
+# starship
+eval "$(starship init bash)"
 
 # flutter
 export FLUTTER_ROOT="$HOME/flutter"
@@ -84,3 +86,4 @@ export PATH=$PATH:~/Library/Android/sdk/build-tools/28.0.3/
 export PATH=$PATH:~/Library/Android/sdk/build-tools/29.0.2/
 
 export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"

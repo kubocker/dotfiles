@@ -72,3 +72,4 @@ if [ -f /Users/kubocker/.tnsrc ]; then
     source /Users/kubocker/.tnsrc
 fi
 ###-tns-completion-end-###
+. "$HOME/.cargo/env"

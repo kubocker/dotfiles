@@ -118,6 +118,10 @@ if [ ! -e ~/.git-completion.bash ]; then
   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
 fi
 
+echo 'starship'
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+
 echo 'Checking...'
 if [ -e $HOME/.vim ]; then
     echo 'rm -rf ~/.vim; then mkdir ~/.vim'
