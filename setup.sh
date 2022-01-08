@@ -127,6 +127,9 @@ fi
 echo "Installing vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+echo "Installing Substrate"
+curl https://getsubstrate.io -sSf | bash
+
 
 echo "make... symbolink"
 for file in ${dotfiles[@]}
