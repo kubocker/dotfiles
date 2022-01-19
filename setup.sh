@@ -71,10 +71,10 @@ if [ ! -e ~/.flutter ]; then
 fi
 
 # SDKMAN
-if [ ! -e ~/.sdkman ]; then
-  curl -s https://get.sdkman.io | bash
-  source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
-fi
+# if [ ! -e ~/.sdkman ]; then
+#   curl -s https://get.sdkman.io | bash
+#   source "/Users/kubocker/.sdkman/bin/sdkman-init.sh"
+# fi
 
 # rust
 if [ ! -e ~/.cargo ]; then
@@ -87,9 +87,9 @@ if [ ! -e ~..deno ]; then
 fi
 
 # haskell
-#if [ ! -e ~/.stack ]; then
-#  curl -sSL https://get.haskellstack.org/ | sh
-#fi
+if [ ! -e ~/.stack ]; then
+  curl -sSL https://get.haskellstack.org/ | sh
+fi
 
 # nim
 if [ ! -e ~/.nimble ]; then
@@ -132,7 +132,7 @@ echo "Installing vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Installing Substrate"
-curl https://getsubstrate.io -sSf | bash
+# curl https://getsubstrate.io -sSf | bash
 
 
 echo "make... symbolink"
