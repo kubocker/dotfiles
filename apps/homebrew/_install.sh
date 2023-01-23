@@ -6,7 +6,8 @@ if [ $(uname -s) = 'Darwin' ]; then
   [ -z "$(which brew)" ] &&
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
 
-  brew update
+  echo 'updating brew....'
+  # brew update
 
   brew tap Homebrew/bundle
   brew tap caskroom/cask
@@ -15,7 +16,7 @@ if [ $(uname -s) = 'Darwin' ]; then
   brew tap ethereum/ethereum
   brew tap boo/cask-upgrade
   brew tap homebrew/services
-  brew tap tigerstrikemedia/homebrew-phalconphp
+  # brew tap tigerstrikemedia/homebrew-phalconphp
   brew tap staticfloat/julia
 
   # brew bundle

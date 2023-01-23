@@ -21,7 +21,6 @@ export PATH
 # eval "$(anyenv init -)"
 
 # direnv
-eval "$(direnv hook bash)"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -36,37 +35,6 @@ export NODENV_ROOT="$HOME/.nodenv"
 export PATH="$NODENV_ROOT/bin:$PATH"
 eval "$(nodenv init -)"
 
-# jenv
-# export JENV_ROOT="$HOME/.jenv"
-# export PATH="$JENV_ROOT/bin:$PATH"
-# eval "$(jenv init -)"
-
-# goenv
-export GOPATH=$HOME/.go
-export GOENV_ROOT="$HOME/.goenv"
-export PATH=$GOENV_ROOT/bin:$PATH
-eval "$(goenv init -)"
-
-# rbenv
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
-
-# phpenv
-# export PHPENV_ROOT="$HOME/.phpenv"
-# export PATH="$PHPENV_ROOT/bin:$PATH"
-# eval "$(phpenv init -)"
-
-# pear
-## export PATH="$HOME/pear/bin:$PATH"
-# composer
-## export PATH=~/.composer/vendor/bin:$PATH
-# valet
-## export PATH=$PATH:~/.composer/vendor/bin
-
-# rust
-## export PTOOLSPATH=/Users/kubocker/.phalcon-devtools/
-## export PATH=$PATH:/Users/kubocker/.phalcon-devtools
 
 # starship
 eval "$(starship init bash)"

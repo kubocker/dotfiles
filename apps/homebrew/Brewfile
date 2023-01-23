@@ -33,4 +33,5 @@ libiconv
 pcre
 php55-phalcon
 php56-phalcon
+julia
 brew install bash-completion
