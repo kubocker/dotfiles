@@ -27,3 +27,19 @@ __main() {
 }
 __main
 unset -f __main
+
+# Wasmer
+export WASMER_DIR="/Users/kubocker/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+
+function personaldev() {
+  git config --global user.name ""
+  git config --global user.email ""
+}
+
+function workdev() {
+  git config --global user.name ""
+  git config --global user.email ""
+}
+
